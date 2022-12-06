@@ -1,0 +1,70 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+const snippets = await codeFetcher("react/10.react-router",[
+    
+])
+
+---
+
+<SlideLayout title="React Router">
+    <section>
+        <h1>React</h1>
+        <img src='/assets/react/0.need-to-know-js/react.png'  alt="" />
+    </section>
+    <Goal>
+        <ol>
+            <li>Understand how <code>React Router</code> works</li>
+            <li>and why we need it</li>
+        </ol>
+    </Goal>
+
+    <AgendaSection header="What is it?">
+        <section>
+            <p>Our applications are SPA's</p>
+            <p><span class="fragment">Single</span> <span class="fragment">Page</span> <span class="fragment">Applications</span></p>
+            <p>Which is just fine</p>
+        </section>
+        <section>
+            <h3>Limitations</h3>
+            <ul>
+                <li class="fragment">No routing (pages)</li>
+                <li class="fragment">Bad for SEO</li>
+                <li class="fragment">Bad for filesizes</li>
+                <li class="fragment">You cannot link to anything but the frontpage</li>
+            </ul>
+        </section>
+        <section>
+            <p>React Router solves this by making "fake" URL's</p>
+            <p>So, we can say:</p>
+            <p><code>if the url is /about use the &lt;About /&gt; component</code> etc</p>
+            <p>Which means, people can link to a page! SEO benefits, reduced filesizes (if we do it right)</p>
+        </section>
+    </AgendaSection>
+    <AgendaSection header="Installation">
+        <section>
+            <p>You're gonna figure this out yourselves</p>
+        </section>
+    </AgendaSection>
+    <AgendaSection header="Exercise #1">
+        <section>
+            <p><a href="https://reactrouter.com/en/main/start/tutorial">https://reactrouter.com/en/main/start/tutorial</a></p>
+        </section>
+    </AgendaSection>
+    
+    
+
+
+    <AgendaSection header="Code Splitting">
+        <p>https://create-react-app.dev/docs/code-splitting/</p>
+        <p>https://reactjs.org/docs/code-splitting.html#route-based-code-splitting</p>
+    </AgendaSection>
+    <AgendaSection header="Deployment"></AgendaSection>
+    <AgendaSection header="+3/4">
+        
+</AgendaSection>
+</SlideLayout>
+
