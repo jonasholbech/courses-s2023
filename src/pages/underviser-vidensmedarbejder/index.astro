@@ -1,0 +1,185 @@
+---
+import SlideLayout from "../../layouts/SlideLayout.astro"
+import ReverseHeader from "../../components/ReverseHeader.astro"
+import ArrowBox from "../../components/ArrowBox.astro"
+import ArrowList from "../../components/ArrowList.astro"
+import TagCloud from "../../components/TagCloud.astro";
+import Tag from "../../components/Tag.astro";
+---
+
+<SlideLayout title="Underviseren som vidensmedarbejder A2022">
+<section data-background-image="/assets/underviser-vidensmedarbejder/lightbulbs.webp">
+  <h2>Underviseren som vidensmedarbejder</h2>
+  <p>Jonas Fannikke Holbech, <a href="mailto:jofh@kea.dk">jofh@kea.dk</a></p>
+</section>
+
+
+
+<section>
+    <h3>Ultra kort om mig</h3>
+    <ul>
+        <li>Jonas</li>
+        <li>Lektor, maj 2018</li>
+        <li>Cand. IT</li>
+        <li>Web programmering, Multimediedesigner</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Ultra kort om oplæget</h3>
+    <blockquote>Jeg er på udkig efter en underviser, som kan holde et kort oplæg (15-20 minutter) på kurset Videnmedarbejder #1 omkring <span class="fragment highlight-blue">hvordan vedkommende har set en ny tendens og taget det videre ind i undervisningen.</span></blockquote>
+</section>
+
+<section>
+    <h3>Kan jeg så det?</h3>
+    <ul class="spaced">
+        <li>Afsnit C fra lektoranmodningen</li>
+        <li>Det følgende er min tilgang, som jeg til lejligheden har "pimpet" lidt op. Det kan være det virker for jer, det kan være det ikke gør</li>
+        <li><strong>Jeg tror det vigtigste er at man arbejder systematisk med at tilegne sig, og inddrage ny viden</strong>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h3>Min model</h3>
+    <ArrowList>
+        <ArrowBox>Se Tendenser</ArrowBox>
+        <ArrowBox>Verificere Tendenser</ArrowBox>
+        <ArrowBox>Vurdere Tendenser</ArrowBox>
+        <ArrowBox>Anvende Tendenser</ArrowBox>
+        <ArrowBox>Bekræfte Tendenser</ArrowBox>
+    </ArrowList>
+    
+</section>
+<section>
+    <ArrowList>
+        <ArrowBox current>Se Tendenser</ArrowBox>
+        <ArrowBox>Verificere Tendenser</ArrowBox>
+        <ArrowBox>Vurdere Tendenser</ArrowBox>
+        <ArrowBox>Anvende Tendenser</ArrowBox>
+        <ArrowBox>Bekræfte Tendenser</ArrowBox>
+    </ArrowList>
+    <TagCloud>
+        <Tag weight="10">Podcasts</Tag>
+        <Tag weight="9">Twitter / Mastodon</Tag>
+        <Tag weight="5">Konferencer</Tag>
+        <Tag weight="3">Kurser</Tag>
+        <Tag weight="1">Newsletters</Tag>
+    </TagCloud>
+</section>
+
+<section>
+    <ArrowList>
+        <ArrowBox>Se Tendenser</ArrowBox>
+        <ArrowBox current>Verificere Tendenser</ArrowBox>
+        <ArrowBox>Vurdere Tendenser</ArrowBox>
+        <ArrowBox>Anvende Tendenser</ArrowBox>
+        <ArrowBox>Bekræfte Tendenser</ArrowBox>
+    </ArrowList>
+    <TagCloud>
+        <Tag weight="10">Frekvens</Tag>
+        <Tag weight="5">Praktik</Tag>
+        <Tag weight="4">Kurser</Tag>
+    </TagCloud>
+</section>
+
+<section>
+    <ArrowList>
+        <ArrowBox>Se Tendenser</ArrowBox>
+        <ArrowBox>Verificere Tendenser</ArrowBox>
+        <ArrowBox current>Vurdere Tendenser</ArrowBox>
+        <ArrowBox>Anvende Tendenser</ArrowBox>
+        <ArrowBox>Bekræfte Tendenser</ArrowBox>
+    </ArrowList>
+    <TagCloud>
+        <Tag weight="5">Relevans</Tag>
+        <Tag weight="5">Filtrering</Tag>
+        <Tag weight="5">Emne</Tag>
+    </TagCloud>
+</section>
+
+<section>
+    <ArrowList>
+        <ArrowBox>Se Tendenser</ArrowBox>
+        <ArrowBox>Verificere Tendenser</ArrowBox>
+        <ArrowBox>Vurdere Tendenser</ArrowBox>
+        <ArrowBox current>Anvende Tendenser</ArrowBox>
+        <ArrowBox>Bekræfte Tendenser</ArrowBox>
+    </ArrowList>
+    <p>&nbsp;</p>
+    <ul>
+        <li>Svært på 1. semester, lettere på valgfaget</li>
+        <li>Start med italesætelse</li>
+        <li>Nogen ting er lette at implementere</li>
+    </ul>
+    <p>&nbsp;</p>
+    <ArrowList scale="100%" wrap>
+        <ArrowBox>Italesættelse</ArrowBox>
+        <ArrowBox>2t workshop</ArrowBox>
+        <ArrowBox>En dag på valgfag</ArrowBox>
+        <ArrowBox>En uge på valgfag</ArrowBox>
+        <ArrowBox>Fire uger på valgfag</ArrowBox>
+        <ArrowBox current>Mål</ArrowBox>
+        <ArrowBox>2nd sem</ArrowBox>
+    </ArrowList>
+</section>
+
+<section>
+    <ArrowList>
+        <ArrowBox>Se Tendenser</ArrowBox>
+        <ArrowBox>Verificere Tendenser</ArrowBox>
+        <ArrowBox>Vurdere Tendenser</ArrowBox>
+        <ArrowBox>Anvende Tendenser</ArrowBox>
+        <ArrowBox current>Bekræfte Tendenser</ArrowBox>
+    </ArrowList>
+    <p>&nbsp;</p>
+    <ul>
+        <li>De studerendes praktik</li>
+        <li>Er tilstedeværelsen stadig frekvent?</li>
+        <li>Findes der værktøjer der kan hjælpe?
+            <ol>
+                <li>
+                    <a href="https://trends.google.com/trends/explore?cat=13&date=today%205-y&q=react,vue,svelte,angular">Google Trends</a>
+                </li>
+                <li><a href="https://npm-stat.com/charts.html?package=react&package=jquery&package=vue&package=angular">NPM Stats</a></li>
+            </ol>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h3>Noter</h3>
+    <ul>
+        <li>Min model er lineær</li>
+        <li>Det er virkeligheden ikke</li>
+        <li>Find jeres egen metode</li>
+        <li>Der er masser' af ting jeg ikke har forholdt mig til
+            <ul>
+                <li>Sparring?</li>
+                <li>Faglige netværk?</li>
+                <li>Andet?</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h3>Apropos</h3>
+
+    <blockquote>"They were supposed to replace the creative jobs last"</blockquote>
+    <ul>
+        <li class="fragment">Det helt store lige nu er nok AI/ML</li>
+        <li class="fragment">Og er det en ting vi slet ikke er rustet til at håndtere?
+            <ul>
+                <li><a href="https://chat.openai.com/chat">https://chat.openai.com/chat</a></li>
+                <li><a href="https://labs.openai.com">https://labs.openai.com</a></li>
+                <li>Lommeregneren, Wikipedia, Internettet?</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1>Tak</h1>
+</section>
+</SlideLayout>

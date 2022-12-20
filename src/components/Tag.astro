@@ -1,0 +1,23 @@
+---
+const {weight} = Astro.props;
+
+---
+<p data-element="Tag" data-weight={weight}><slot /></p>
+<style>
+    p {
+        font-size: calc(10px * var(--weight));
+        transform: rotate(var(--rotation));
+        color: hsl(var(--hue), 70%, 70%);
+        translate:  var(--x) var(--y);
+    }
+</style>
+
+<script>
+    const Tags = document.querySelectorAll(`[data-element="Tag"]`);
+    Tags.forEach(el=>{
+        const rotation = Math.random()*180-90+"deg";
+        const hue = Math.random()*360;
+        const translate = [Math.random()*200-100+"px", Math.random()*200-100+"px"];
+        el.style = `--weight: ${el.dataset.weight}; --rotation: ${rotation}; --hue:${hue}; --x: ${translate[0]}; --y: ${translate[1]}`;
+    })
+</script>

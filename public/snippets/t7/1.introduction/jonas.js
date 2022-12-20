@@ -4,6 +4,6 @@ let jonas = {
   jobs: ["Father", "Senior Lecturer MMD", "Self Employed"],
   previousJobs: ["External Lecturer ITU", "KTS", "RTS"],
   status: "nerd",
-  yearsBrewingBeer: 9.2,
+  yearsBrewingBeer: 10.7,
   kids: 3,
 };

@@ -1,0 +1,66 @@
+---
+const {current=false} = Astro.props;
+---
+<style>
+
+li {
+  -webkit-tap-highlight-color: transparent;
+  display: grid;
+  grid: 1fr / 34px auto 34px;
+  align-items: center;
+  border: 1px solid var(--r-background-color);
+  border-width: 1px 0;
+  text-decoration: none;
+  background: var(--arrow-bg);
+  --arrow-bg: rgb(50, 105, 124);
+  --text-color: white;
+}
+li:before,
+li:after {
+  display: block;
+  border: 34px solid transparent;
+  border-right-width: 0;
+  content: "";
+}
+li:before {
+  border-left-color: var(--r-background-color);
+}
+li:after {
+  transform: translateX(33px);
+  border-left-color: var(--arrow-bg);
+}
+span {
+  padding-left: 10px;
+  display:flex;
+  place-items: center;
+  font-size:1rem;
+  color: var(--text-color);
+}
+span:first-line {
+  color: var(--text-color);
+  font-weight: 300;
+  
+}
+[data-current] {
+  background: var(--text-color);
+}
+[data-current] span {
+  color: var(--arrow-bg);
+}
+[data-current] span:first-line {
+  color: white;
+}
+[data-current]:before {
+  /* border-left-color: var(--text-color); */
+}
+[data-current]:after {
+  border-left-color: var(--text-color);
+}
+[data-current] + li:before {
+  /* border-left-color: var(--text-color); */
+}
+
+</style>
+<li data-current={current}>
+    <span><slot /></span>
+</li>
