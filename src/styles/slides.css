@@ -131,6 +131,10 @@ rect {
   border: 1px solid var(--r-main-color);
 }
 
+.reveal .spaced li {
+  margin-bottom: 1rem;
+}
+
 .reveal .lowercase {
   text-transform: lowercase;
 }
