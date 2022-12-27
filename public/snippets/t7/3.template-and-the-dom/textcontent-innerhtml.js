@@ -1,9 +1,9 @@
 const el = document.querySelector("p");
 
-//the browser turns it into text
-//the user sees the HTML tag
-el.textContent = "<h1>Hi mom</h1>";
+//browseren laver det om til tekst
+//brugeren ser HTML tagget
+el.textContent = "<h1>Hej Verden</h1>";
 
-//the browser turns it in to html
-//the user sees big text
-el.innerHTML = "<h1>Hi mom</h1>";
+//browseren laver det om til HTML
+//brugeren ser stor tekst
+el.innerHTML = "<h1>Hej Verden</h1>";

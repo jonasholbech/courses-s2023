@@ -5,7 +5,7 @@ const templateElement = document.querySelector("#myTemplate").content;
 const myClone = templateElement.cloneNode(true);
 
 //Step 3: Change the content
-myClone.querySelector("h1").textContent = "Hi Mom";
+myClone.querySelector("h1").textContent = "Hej verden";
 //...
 
 //Step 4: Chose the new "parent" element

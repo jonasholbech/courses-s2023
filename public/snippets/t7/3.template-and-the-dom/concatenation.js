@@ -1,4 +1,4 @@
 const name = "Jonas";
-const age = "none of your business";
+const age = "min egen sag";
 
-const newString = "Hello, my name is " + name + " and my age is " + age;
+const newString = "Hej, mit navn er " + name + " og min alder er " + age;

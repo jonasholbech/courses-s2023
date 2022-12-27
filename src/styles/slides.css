@@ -138,6 +138,11 @@ rect {
 .reveal .lowercase {
   text-transform: lowercase;
 }
+
+:is(h1, h2, h3, h4, h5, h6) code {
+  color: orange;
+  font-family: var(--r-code-font);
+}
 /* .reveal ol.alternate > li:nth-child(odd),
 .reveal ul.alternate > li:nth-child(odd) {
 }
