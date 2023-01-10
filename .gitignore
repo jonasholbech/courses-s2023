@@ -18,3 +18,5 @@ yarn-error.log*
 
 # macOS-specific files
 .DS_Store
+
+src/pages/t7/2.1.git/
