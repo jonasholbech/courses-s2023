@@ -1,3 +1,4 @@
+//remove iframnes from pdf's (they break decktape)
 Reveal.addEventListener("ready", () => {
   if (window.location.search.match(/decktape/gi)) {
     Reveal.getSlides().forEach((slide) => {
@@ -23,7 +24,8 @@ Reveal.addEventListener("ready", () => {
     });
   }
 });
-//add cusome animation classes to svg elements in .explanation
+
+//add some animation classes to svg elements in .explanation
 Reveal.addEventListener("fragmentshown", function (event) {
   // event.fragment = the fragment DOM element
 
@@ -39,6 +41,7 @@ Reveal.addEventListener("fragmentshown", function (event) {
   }
 });
 
+//external links open in a new windows
 (function () {
   const links = document.querySelectorAll("a");
   links.forEach((link) => {
