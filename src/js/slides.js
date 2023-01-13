@@ -50,3 +50,39 @@ Reveal.addEventListener("fragmentshown", function (event) {
       (link.target = "_blank");
   });
 })();
+
+import rough from "roughjs";
+Reveal.on("slidechanged", (event) => {
+  const svg = event.currentSlide.querySelector("[data-is-rough]");
+  if (svg) {
+    const steps = JSON.parse(svg.dataset.isRough);
+    const rc = rough.svg(svg);
+    steps.forEach((step) => {
+      let node;
+      switch (step.type) {
+        case "rectangle":
+          node = rc.rectangle(
+            step.x,
+            step.y,
+            step.width,
+            step.height,
+            step.options
+          );
+          break;
+        case "line":
+          node = rc.line(step.x1, step.y1, step.x2, step.y2, step.options);
+          break;
+        case "text":
+          node = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          node.textContent = step.text;
+          node.style.stroke = "white";
+          node.style.fill = "white";
+          node.setAttribute("x", step.x);
+          node.setAttribute("y", step.y);
+          break;
+      }
+
+      svg.appendChild(node);
+    });
+  }
+});

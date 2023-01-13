@@ -1,0 +1,10 @@
+---
+const { steps, id } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 1000 1000"
+  width="1000"
+  height="600"
+  id={id}
+  data-is-rough={JSON.stringify(steps)}></svg>
