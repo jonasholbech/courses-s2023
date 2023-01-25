@@ -40,17 +40,9 @@ import Tree from "./components/Tree.astro";
       <li>Setting up a project</li>
       <li>Adding & commiting</li>
       <li>Pushing</li>
+      <li>branch out, merge, switch</li>
       <li>Checkout</li>
       <li>Resetting</li>
-      <li>TODO: update</li>
-      <li>
-        TODO: skal de have et (word) dokument de skal fylde ud med definitioner?
-      </li>
-      <li>TODO: lav nye videoer</li>
-
-      <!-- <li class="stricken">Branches</li>
-    <li class="stricken">Merging</li>
-    <li class="stricken">Dictionary</li> -->
     </ol>
   </section>
   <AgendaSection header="git, what is it">
@@ -113,7 +105,7 @@ import Tree from "./components/Tree.astro";
         <div class="col-6">
           <p>
             <video
-              data-src="/assets/t7/2.git/install-extensions.webm"
+              data-src="/assets/t7/2.git/git-1-extensions.mp4"
               height="200"
               controls></video>
           </p>
@@ -174,7 +166,7 @@ import Tree from "./components/Tree.astro";
       </ol>
       <p>
         <video
-          data-src="/assets/t7/2.git/1-setup-project.webm"
+          data-src="/assets/t7/2.git/git-2-new-project.mp4"
           height="300"
           controls></video>
       </p>
@@ -190,8 +182,10 @@ import Tree from "./components/Tree.astro";
         </li>
       </ol>
       <p>
-        <video data-src="/assets/t7/2.git/2-init.webm" height="400" controls
-        ></video>
+        <video
+          data-src="/assets/t7/2.git/git-3-initialize.mp4"
+          height="400"
+          controls></video>
       </p>
     </section>
     <section>
@@ -199,8 +193,10 @@ import Tree from "./components/Tree.astro";
         <li>In VS Code, <code>add</code> (+) all the files you need</li>
         <li>Write a meaningfull message and click <code>commit</code> (V)</li>
       </ol>
-      <video data-src="/assets/t7/2.git/3-add-commit.webm" height="300" controls
-      ></video>
+      <video
+        data-src="/assets/t7/2.git/git-4-add-commit.mp4"
+        height="300"
+        controls></video>
     </section>
     <section>
       <p>Now you have version control locally.</p>
@@ -211,7 +207,7 @@ import Tree from "./components/Tree.astro";
   <AgendaSection header="Exercise #2">
     <section>
       <ol class="striped">
-        <li>Split into groups (2-3 people)</li>
+        <li>Split into your study groups</li>
         <li>
           Player A: follow the steps above, talk each other through the process.
           Then...
@@ -253,10 +249,8 @@ import Tree from "./components/Tree.astro";
         </li>
         <li>You can click "Open in GitHub" to see you new repository</li>
       </ol>
-      <video
-        data-src="/assets/t7/2.git/4-publish-to-github.webm"
-        height="300"
-        controls></video>
+      <video data-src="/assets/t7/2.git/git-5-publish.mp4" height="300" controls
+      ></video>
     </section>
     <section>
       <ul start="9">
@@ -325,7 +319,7 @@ import Tree from "./components/Tree.astro";
 
   <AgendaSection header="Forking">
     <section>
-      <video height="600" data-src="/assets/t7/2.git/forking.webm" controls
+      <video height="600" data-src="/assets/t7/2.git/git-6-fork.mp4" controls
       ></video>
     </section>
   </AgendaSection>
@@ -356,12 +350,27 @@ import Tree from "./components/Tree.astro";
     </section>
     <section>
       <p>
-        <video data-src="/assets/t7/2.git/cloning.webm" height="600" controls
+        <video data-src="/assets/t7/2.git/git-7-clone.mp4" height="600" controls
         ></video>
       </p>
     </section>
     <section>
       <p>Exercise in this coming later today</p>
+    </section>
+    <section>
+      <h3>To sum it up</h3>
+      <div class="fragment">
+        <h4>Initialize</h4>
+        <p>For when you create a new project</p>
+      </div>
+      <div class="fragment">
+        <h4>Cloning</h4>
+        <p>For when you're in a team, or just want to take a look</p>
+      </div>
+      <div class="fragment">
+        <h4>Forking (and then cloning)</h4>
+        <p>For when you've found something cool and want to work on it</p>
+      </div>
     </section>
   </AgendaSection>
 
@@ -400,7 +409,7 @@ import Tree from "./components/Tree.astro";
     <section>
       <h3><code>push</code></h3>
       <p>Upload our commits</p>
-      <video height="200" data-src="/assets/t7/2.git/9-push.webm" controls
+      <video height="400" data-src="/assets/t7/2.git/git-8-push.mp4" controls
       ></video>
     </section>
   </AgendaSection>
@@ -433,9 +442,9 @@ import Tree from "./components/Tree.astro";
     <section>
       <ol>
         <li>Creating a branch</li>
-        <li>Merging</li>
         <li>Switching</li>
         <li>Pushing/publishing</li>
+        <li>Merging</li>
       </ol>
     </section>
     <section>
@@ -454,26 +463,18 @@ import Tree from "./components/Tree.astro";
       </p>
     </section>
     <section>
-      <p>TODO: video instructions</p>
-    </section>
-    <section>
-      <h2>Merging</h2>
-    </section>
-    <section>
-      <p>
-        Make sure you've <code>add</code>'ed and <code>commit</code>'ed
-        everything before you do this
-      </p>
-    </section>
-    <section>
-      <p>TODO: video instructions</p>
+      <video
+        height="600"
+        data-src="/assets/t7/2.git/git-9-create-branch.mp4"
+        controls></video>
     </section>
     <section>
       <h2>Switching</h2>
       <p>Looking at another branch</p>
     </section>
     <section>
-      <p>TODO: video instructions</p>
+      <video height="600" data-src="/assets/t7/2.git/git-10-switch.mp4" controls
+      ></video>
     </section>
     <section>
       <h2>pushing</h2>
@@ -486,7 +487,23 @@ import Tree from "./components/Tree.astro";
       </p>
     </section>
     <section>
-      <p>TODO: video instructions</p>
+      <video
+        height="600"
+        data-src="/assets/t7/2.git/git-11-push-branch.mp4"
+        controls></video>
+    </section>
+    <section>
+      <h2>Merging</h2>
+    </section>
+    <section>
+      <p>
+        Make sure you've <code>add</code>'ed and <code>commit</code>'ed
+        everything before you do this
+      </p>
+    </section>
+    <section>
+      <video height="600" data-src="/assets/t7/2.git/git-12-merge.mp4" controls
+      ></video>
     </section>
   </AgendaSection>
 
@@ -501,6 +518,7 @@ import Tree from "./components/Tree.astro";
           >https://github.com/jonasholbech/mmd2-merge-exercise</a
         >
       </p>
+      <p>//TODO: check at det virker uden conflicts</p>
     </section>
   </AgendaSection>
 
@@ -513,6 +531,12 @@ import Tree from "./components/Tree.astro";
     </section>
     <section>
       <p>NEVER WORK ON <code>MAIN</code></p>
+    </section>
+    <section>
+      <p>new feature === new branch</p>
+      <p>Commit fairly often</p>
+      <p>Branches are cheap, just make one</p>
+      <p>You can always just ignore it (no merging)</p>
     </section>
   </AgendaSection>
 
