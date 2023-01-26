@@ -1,17 +1,16 @@
-fetch("SOME-API-ENDPOINT")
-  .then((response) => {
-    if (!response.ok) {
-      throw Error(response.statusText);
-    }
-    return response.json();
-  })
-  .then(dataReceived)
-  .catch((e) => {
+async function getData() {
+  const response = await fetch("SOME-API-ENDPOINT").catch((e) => {
     //Woops, something went wrong
-    console.error("An error occured:", e.message);
+    throw new Error(e);
   });
-
-function dataReceived(data) {
-  //We have the data
-  console.log(data);
+  if (response.ok) {
+    const data = await response.json();
+    dataReceived(data);
+  }
 }
+
+function dataReceived(myData) {
+  //We have the data
+  console.log(myData);
+}
+getData();
