@@ -1,16 +1,17 @@
-async function getData() {
-  const response = await fetch("SOME-API-ENDPOINT").catch((e) => {
+fetch("SOME-API-ENDPOINT")
+  .then((response) => {
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+    return response.json();
+  })
+  .then(dataReceived)
+  .catch((e) => {
     //Woops, something went wrong
-    throw new Error(e);
+    console.error("An error occured:", e.message);
   });
-  if (response.ok) {
-    const data = await response.json();
-    dataReceived(data);
-  }
-}
 
-function dataReceived(myData) {
+function dataReceived(data) {
   //We have the data
-  console.log(myData);
+  console.log(data);
 }
-getData();

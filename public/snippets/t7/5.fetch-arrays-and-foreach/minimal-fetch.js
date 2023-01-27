@@ -1,11 +1,8 @@
-async function getData() {
-  const response = await fetch("SOME-API-ENDPOINT");
-  const data = await response.json();
-  dataReceived(data);
-}
+fetch("SOME-API-ENDPOINT")
+  .then((response) => response.json())
+  .then(dataReceived);
 
-function dataReceived(myData) {
+function dataReceived(data) {
   //We have the data
-  console.log(myData);
+  console.log(data);
 }
-getData();
