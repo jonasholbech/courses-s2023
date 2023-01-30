@@ -13,7 +13,7 @@
     "preview": "astro preview",
     "predeploy": "npm run build",
     "deploy": "node deploy.js",
-    "postdeployCOMMENTEDOUT": "npm run createPDFs && npm run test",
+    "postdeploy": "npm run createPDFs && npm run test",
     "createPDFs": "npm-run-all -p --race dev startServerScanFolders",
     "startServerScanFolders": "sleep 15 && node scanFolders.js",
     "pdf": "decktape reveal --load-pause=5000 --size=1280x1280 --chrome-arg=--disable-web-security --chrome-arg=--allow-external-pages ",
