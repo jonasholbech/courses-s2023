@@ -20,7 +20,7 @@ const snippets = await codeFetcher("t7/3.template-and-the-dom", [
     <section>
       <h2>The</h2>
       <h1><code>&lt;template&gt;</code></h1>
-      <h2><span class="lowercase">and the</span>DOM</h2>
+      <h2><span class="lowercase">and the</span> DOM</h2>
       <p>A modern love story</p>
     </section>
   </section>
@@ -42,7 +42,7 @@ const snippets = await codeFetcher("t7/3.template-and-the-dom", [
   </section>
 
   <section>
-    <h3>I dag #2</h3>
+    <h3>Today #1</h3>
     <ol>
       <li>Understanding the DOM</li>
       <li>Basic DOM manipulation</li>
@@ -51,9 +51,13 @@ const snippets = await codeFetcher("t7/3.template-and-the-dom", [
     </ol>
   </section>
 
-  <AgendaSection header="Understanding the <code>DOM</code>">
+  <AgendaSection>
+    <div slot="header-component">
+      <h2>Understanding</h2>
+      <h1>the <code>DOM</code></h1>
+    </div>
     <section>
-      <h3>Ordforråd</h3>
+      <h3>Vocabulary</h3>
       <ul>
         <li><a href="#/dictionary-1">DOM</a></li>
         <li><a href="#/dictionary-2">Element</a></li>
