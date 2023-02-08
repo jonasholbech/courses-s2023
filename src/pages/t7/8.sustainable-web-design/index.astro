@@ -31,7 +31,7 @@ const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
         Ultimately the energy used in our digital consumption collectively emits
         the equivalent amount of carbon as the entire airline industry
       </p>
-      <cite>Vaughan Lindsay, ClimateCare CEO</cite>
+      <cite> - Vaughan Lindsay, ClimateCare CEO</cite>
     </blockquote>
   </section>
   <section>
@@ -40,8 +40,8 @@ const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
         This is equivalent to about 3.7% of global greenhouse emissions. And is
         expected to double by 2025.
       </p>
-      <cite
-        >ClimateCare,<a
+      <cite>
+        - ClimateCare,<a
           href="https://www.climatecare.org/resources/news/infographic-carbonfootprint-
       internet/"
           >https://www.climatecare.org/resources/news/infographic-carbonfootprint-
@@ -51,7 +51,7 @@ const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
     </blockquote>
   </section>
   <section data-auto-animate>
-    <p>Which equals Germany's total emission!</p>
+    <p>If our digital consumption was a country</p>
     <div style="display:flex;flex-direction:column; gap:0.2rem;">
       <div class="fragment" style="background-color:orange; width: 100%;">
         China
@@ -142,8 +142,8 @@ const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
           measure the energy they use, and the carbon emissions for which they
           are responsible.
         </p>
-        <cite
-          >FROM <a
+        <cite>
+          - FROM <a
             href="https://www.the-public-good.com/web-development/measuring-the-web"
             >"Measuring the Web"</a
           >
@@ -184,13 +184,15 @@ const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
     <section>
       <h3>What can I do?</h3>
       <ol>
-        <li>Do you really need it?</li>
-        <li>
+        <li class="fragment">Do you really need it?</li>
+        <li class="fragment">
           Use "nextgen formats". <code>webm</code> is way smaller than <code
             >mp4</code
           >/<code>mov</code>
         </li>
-        <li>Avoid embedding YouTube (crazy amount of JavaScript)</li>
+        <li class="fragment">
+          Avoid embedding YouTube (crazy amount of JavaScript)
+        </li>
       </ol>
     </section>
     <section>
@@ -211,17 +213,21 @@ const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
     <section>
       <h3>What can I do?</h3>
       <ol>
-        <li>Do you really need them all?</li>
-        <li>
+        <li class="fragment">Do you really need them all?</li>
+        <li class="fragment">
           Use "nextgen formats". <code>webp</code> is way smaller than <code
             >jpg</code
           >/<code>png</code>
         </li>
-        <li><strong>JPG</strong> is FORBIDDEN</li>
-        <li>Lazyload</li>
-        <li>Compress, compress, compress</li>
-        <li>Could it be an SVG?</li>
-        <li>Make sure they are the right size</li>
+        <li class="fragment"><strong>JPG</strong> is FORBIDDEN</li>
+        <li class="fragment">
+          <a href="https://web.dev/browser-level-image-lazy-loading/"
+            >Lazy Load</a
+          >
+        </li>
+        <li class="fragment">Compress, compress, compress</li>
+        <li class="fragment">Could it be an SVG?</li>
+        <li class="fragment">Make sure they are the right size</li>
       </ol>
     </section>
     <section>
@@ -249,9 +255,9 @@ const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
     <section>
       <h3>What can I do?</h3>
       <ol>
-        <li>Is a giant JS framework needed for the job?</li>
-        <li>How much JavaScript?</li>
-        <li>Optimize and compress</li>
+        <li class="fragment">Is a giant JS framework needed for the job?</li>
+        <li class="fragment">How much JavaScript?</li>
+        <li class="fragment">Optimize and compress</li>
       </ol>
     </section>
     <section>
@@ -286,15 +292,19 @@ const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
     <section>
       <h3>What can I do?</h3>
       <ol>
-        <li>Do you really need that font? All those weights?</li>
-        <li>How many fonts and weights are necessary?</li>
-        <li>
+        <li class="fragment">
+          Do you really need that font? All those weights?
+        </li>
+        <li class="fragment">How many fonts and weights are necessary?</li>
+        <li class="fragment">
           Could we stick to a <a
             href="https://www.digitalocean.com/community/tutorials/css-system-font-stack"
             >web-safe-font</a
           >?
         </li>
-        <li>use a <a href="https://v-fonts.com/">variable font</a></li>
+        <li class="fragment">
+          use a <a href="https://v-fonts.com/">variable font</a>
+        </li>
       </ol>
     </section>
     <section>
@@ -364,15 +374,24 @@ const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
       <h4>JavaScript</h4>
     </section>
   </AgendaSection>
-  <AgendaSection header="Hosting" />
-  <AgendaSection header="So what can I do?">
-    <section></section>
+  <AgendaSection header="Hosting">
+    <section>
+      <p>Some hosts are greener than others</p>
+      <p>GitHub Pages and Netlify are somne of the greener</p>
+    </section>
   </AgendaSection>
 
-  <AgendaSection header="Performance Budgets">
+  <AgendaSection header="Can I do more?">
     <section>
-      <p>https://www.performancebudget.io/</p>
+      <p>Sure, it's mostly a mental model. Digital consumption has a cost</p>
+      <p>
+        Can you make the visitor find what they need fast, without browsing too
+        many pages?
+      </p>
     </section>
+  </AgendaSection>
+
+  <AgendaSection h2="Performance Budgets">
     <section>
       <blockquote>
         <p>
@@ -388,14 +407,21 @@ const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
         </cite>
       </blockquote>
     </section>
+    <section>
+      <p>
+        <a href="https://www.performancebudget.io/"
+          >https://www.performancebudget.io/</a
+        >
+      </p>
+    </section>
   </AgendaSection>
   <AgendaSection header="Is it all bad?" h2="Are we doomed?">
     <section>
       <h1 class="fragment">maybe</h1>
     </section>
     <section>
-      <p>Email: 1/60 as polutting</p>
-      <p>But we send 60x the amount of emails</p>
+      <p><strong>Email:</strong> 1/60 as polutting as snail-mail</p>
+      <p class="fragment">But we send at least 60x the amount of emails</p>
     </section>
   </AgendaSection>
 </SlideLayout>
