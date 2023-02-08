@@ -1,0 +1,401 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+const snippets = await codeFetcher("t7/8.sustainable-web-design", []);
+---
+
+<SlideLayout title="Sustainable Web Design">
+  <AgendaSection h2="Sustainable Web Design" />
+
+  <section>
+    <Goal>
+      <ol>
+        <li>Get an insight into the CO<sup>2</sup> cost of the web</li>
+        <li>Get a few pointers on what you can do</li>
+        <li>And a few things to consider</li>
+      </ol>
+    </Goal>
+  </section>
+  <section data-auto-animate>
+    <h2>Digital = Green</h2>
+  </section>
+  <section data-auto-animate>
+    <h2>Digital ❌ Green</h2>
+  </section>
+  <section>
+    <blockquote>
+      <p>
+        Ultimately the energy used in our digital consumption collectively emits
+        the equivalent amount of carbon as the entire airline industry
+      </p>
+      <cite>Vaughan Lindsay, ClimateCare CEO</cite>
+    </blockquote>
+  </section>
+  <section>
+    <blockquote>
+      <p>
+        This is equivalent to about 3.7% of global greenhouse emissions. And is
+        expected to double by 2025.
+      </p>
+      <cite
+        >ClimateCare,<a
+          href="https://www.climatecare.org/resources/news/infographic-carbonfootprint-
+      internet/"
+          >https://www.climatecare.org/resources/news/infographic-carbonfootprint-
+          internet/</a
+        >
+      </cite>
+    </blockquote>
+  </section>
+  <section data-auto-animate>
+    <p>Which equals Germany's total emission!</p>
+    <div style="display:flex;flex-direction:column; gap:0.2rem;">
+      <div class="fragment" style="background-color:orange; width: 100%;">
+        China
+      </div>
+      <div class="fragment" style="background-color:orange; width: 50%;">
+        USA
+      </div>
+      <div class="fragment" style="background-color:orange; width: 25%;">
+        India
+      </div>
+      <div class="fragment" style="background-color:orange; width: 20%;">
+        Russia
+      </div>
+      <div class="fragment" style="background-color:orange; width: 15%;">
+        Japan
+      </div>
+      <div class="fragment" style="background-color:orange; width: 10%;">
+        Germany
+      </div>
+      <div class="fragment" style="background-color:royalblue; width: 10%;">
+        Internet
+      </div>
+    </div>
+  </section>
+  <AgendaSection header="Primary sources of CO<sup>2</sup>">
+    <section>
+      <h2>Electricity</h2>
+      <ul>
+        <li>Servers / hosts</li>
+        <li>Data Centres</li>
+        <li>Our Devices</li>
+        <li>IoT</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Data Transfer</h2>
+      <ul>
+        <li>
+          More data = more energy
+          <ul>
+            <li>Streaming</li>
+            <li>"syncing"</li>
+            <li>Transfer</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Manufacturing</h2>
+      <ul>
+        <li>We all want new devices</li>
+        <li>all the time</li>
+      </ul>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Personal Data">
+    <section>
+      <h2>My Household</h2>
+      <img
+        data-src="/assets/t7/8.sustainable-web-design/usage.webp"
+        height="500"
+        alt=""
+      />
+    </section>
+    <section>
+      <h2>My Phone</h2>
+      <a href="/assets/t7/8.sustainable-web-design/phone.webp" target="_blank"
+        ><img
+          data-src="/assets/t7/8.sustainable-web-design/phone.webp"
+          height="500"
+          alt=""
+        />
+      </a>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Exercise, #1">
+    <section>
+      <p>Find that page on your phone</p>
+      <p>Take a look at what your consumption is</p>
+      <p>Anything you don't need?</p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Measuring">
+    <section>
+      <blockquote>
+        <p>
+          In order to build more sustainable websites and apps, we first need to
+          measure the energy they use, and the carbon emissions for which they
+          are responsible.
+        </p>
+        <cite
+          >FROM <a
+            href="https://www.the-public-good.com/web-development/measuring-the-web"
+            >"Measuring the Web"</a
+          >
+        </cite>
+      </blockquote>
+    </section>
+    <section>
+      <p>
+        ✅ <a href="https://websitecarbon.com">Website carbon calculator</a>
+      </p>
+      <p>✅ Google Lighthouse</p>
+      <p>✅ The network tab</p>
+      <p>❓ <a href="https://ecograder.com">ecograder.com</a></p>
+      <p>❓ <a href="https://ecoping.earth/">Ecoping</a></p>
+      <p>❓ <a href="https://digitalbeacon.co/">Beacon</a></p>
+      <p>
+        ❓
+        <a href="https://www.thegreenwebfoundation.org/"
+          >The Green Web Foundation</a
+        >
+      </p>
+      <p>❓ <a href="http://www.ecometer.org/">Ecometer</a></p>
+    </section>
+  </AgendaSection>
+  <!-- TODO: en søjle per sinner -->
+  <AgendaSection header="<code>kB</code> sinners" />
+  <AgendaSection header="1. Video">
+    <section>
+      <h3>What is the problem?</h3>
+      <p>Video is by FAR the biggest culprit</p>
+      <p>
+        <a
+          href="https://httparchive.org/reports/page-weight?start=2019_09_01&end=latest&view=list#bytesVideo"
+          >Statistics</a
+        >
+      </p>
+    </section>
+    <section>
+      <h3>What can I do?</h3>
+      <ol>
+        <li>Do you really need it?</li>
+        <li>
+          Use "nextgen formats". <code>webm</code> is way smaller than <code
+            >mp4</code
+          >/<code>mov</code>
+        </li>
+        <li>Avoid embedding YouTube (crazy amount of JavaScript)</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Optimizers</h2>
+      <p><a href="https://ffmpeg.org/">FFMPEG</a></p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="2. images">
+    <section>
+      <h3>What is the problem?</h3>
+      <p>
+        <a
+          href="https://httparchive.org/reports/page-weight?start=2019_09_01&end=latest&view=list#bytesImg"
+          >Statistics</a
+        >
+      </p>
+    </section>
+    <section>
+      <h3>What can I do?</h3>
+      <ol>
+        <li>Do you really need them all?</li>
+        <li>
+          Use "nextgen formats". <code>webp</code> is way smaller than <code
+            >jpg</code
+          >/<code>png</code>
+        </li>
+        <li><strong>JPG</strong> is FORBIDDEN</li>
+        <li>Lazyload</li>
+        <li>Compress, compress, compress</li>
+        <li>Could it be an SVG?</li>
+        <li>Make sure they are the right size</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Optimizers</h2>
+      <p><a href="https://squoosh.app/">https://squoosh.app/</a></p>
+      <p>
+        <a href="https://jakearchibald.github.io/svgomg/"
+          >https://jakearchibald.github.io/svgomg/</a
+        >
+      </p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="3. JavaScript">
+    <section>
+      <h3>What is the problem?</h3>
+      <p>
+        <a
+          href="https://httparchive.org/reports/page-weight?start=2019_09_01&end=latest&view=list#bytesJs"
+          >Statistics</a
+        >
+      </p>
+      <p>Frameworks have made it easy to add WAY too much JavaScript</p>
+      <p>This is not a problem we have, yet</p>
+    </section>
+    <section>
+      <h3>What can I do?</h3>
+      <ol>
+        <li>Is a giant JS framework needed for the job?</li>
+        <li>How much JavaScript?</li>
+        <li>Optimize and compress</li>
+      </ol>
+    </section>
+    <section>
+      <h2>+ Third Party Scripts</h2>
+      <p>Do you need tracking?</p>
+      <p>Google Analytics, Facebook, LinkedIn, Twitter, Pinterest</p>
+      <p>Video embeds</p>
+      <p>Consider alternatives</p>
+    </section>
+    <section>
+      <h2>Optimizers</h2>
+      <p>There are so many tools for this</p>
+      <p>
+        <a href="https://www.cleancss.com/javascript-minify/"
+          >https://www.cleancss.com/javascript-minify/</a
+        >
+      </p>
+      <p>(don't bother yet)</p>
+      <p>Svelte, Astro</p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="4. Fonts">
+    <section>
+      <h3>What is the problem?</h3>
+      <p>
+        <a
+          href="https://httparchive.org/reports/page-weight?start=2019_09_01&end=latest&view=list#bytesFont"
+          >Statistics</a
+        >
+      </p>
+    </section>
+    <section>
+      <h3>What can I do?</h3>
+      <ol>
+        <li>Do you really need that font? All those weights?</li>
+        <li>How many fonts and weights are necessary?</li>
+        <li>
+          Could we stick to a <a
+            href="https://www.digitalocean.com/community/tutorials/css-system-font-stack"
+            >web-safe-font</a
+          >?
+        </li>
+        <li>use a <a href="https://v-fonts.com/">variable font</a></li>
+      </ol>
+    </section>
+    <section>
+      <h2>Optimizers</h2>
+      <p>
+        <a href="https://www.fontsquirrel.com/tools/webfont-generator"
+          >https://www.fontsquirrel.com/tools/webfont-generator</a
+        >
+      </p>
+      <p>
+        <a href="https://everythingfonts.com/subsetter"
+          >https://everythingfonts.com/subsetter</a
+        >
+      </p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="5. CSS">
+    <section>
+      <h3>What is the problem?</h3>
+      <p>
+        <a
+          href="https://httparchive.org/reports/page-weight?start=2019_09_01&end=latest&view=list#bytesCss"
+          >Statistics</a
+        >
+      </p>
+      <p>Again: Frameworks have made it super easy to add WAY too much CSS</p>
+    </section>
+    <section>
+      <h3>What can I do?</h3>
+      <ol>
+        <li>Do you need that framework?</li>
+        <li>Optimze and compress</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Optmizers</h2>
+      <p>Again: Plenty of tools</p>
+      <p>Again: Don't bother untill you sart using frameworks</p>
+      <p>
+        <a href="https://www.cleancss.com/css-minify/"
+          >https://www.cleancss.com/css-minify/</a
+        >
+      </p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Principle of least power">
+    <section>
+      <p>
+        If you can: <br /><strong
+          >Solve your problems using the "weakest" technology</strong
+        >
+      </p>
+    </section>
+    <section data-auto-animate>
+      <h2>HTML</h2>
+    </section>
+    <section data-auto-animate>
+      <h2>HTML</h2>
+      <p>⬇️</p>
+      <h3>CSS</h3>
+    </section>
+    <section data-auto-animate>
+      <h2>HTML</h2>
+      <p>⬇️</p>
+      <h3>CSS</h3>
+      <p>⬇️</p>
+      <h4>JavaScript</h4>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Hosting" />
+  <AgendaSection header="So what can I do?">
+    <section></section>
+  </AgendaSection>
+
+  <AgendaSection header="Performance Budgets">
+    <section>
+      <p>https://www.performancebudget.io/</p>
+    </section>
+    <section>
+      <blockquote>
+        <p>
+          Shaving off a single kilobyte in a file that is being loaded on 2
+          million websites reduces CO<sub>2</sub>&nbsp;emissions by an estimated
+          2950 kg per month.
+        </p><cite
+          >— Danny van Kooten,&nbsp;<em
+            ><a href="https://dannyvankooten.com/website-carbon-emissions/"
+              >CO<sub>2</sub>&nbsp;Emissions on the Web</a
+            >
+          </em>
+        </cite>
+      </blockquote>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Is it all bad?" h2="Are we doomed?">
+    <section>
+      <h1 class="fragment">maybe</h1>
+    </section>
+    <section>
+      <p>Email: 1/60 as polutting</p>
+      <p>But we send 60x the amount of emails</p>
+    </section>
+  </AgendaSection>
+</SlideLayout>

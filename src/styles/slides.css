@@ -126,7 +126,7 @@ rect {
   text-transform: lowercase;
 }
 
-:is(h1, h2, h3, h4, h5, h6) code {
+:is(h1, h2, h3, h4, h5, h6, li, p) code {
   color: orange;
   font-family: var(--r-code-font);
 }
