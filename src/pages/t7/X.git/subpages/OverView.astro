@@ -1,0 +1,521 @@
+---
+import File from "../components/File.astro";
+import AnnotatedArrow from "../components/AnnotatedArrow.astro";
+import AgendaSection from "../../../../components/AgendaSection.astro";
+---
+
+<AgendaSection header="Overview">
+  <section data-auto-animate>
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <g data-id="workingcopy" class="fall">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea" class="fall" style="--delay:1s"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository" class="fall" style="--delay:2s"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository" class="fall" style="--delay:3s"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+      </svg>
+      <p data-id="messagebox" style="--top:100px">
+        From a top view, git is just moving stuff between four boxes
+      </p>
+    </div>
+  </section>
+
+  <section data-auto-animate>
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <g data-id="workingcopy">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+        <path
+          class="DrawBox"
+          d="M 0,0 l 700,0 l 0,100 l -700,0 l 0,-100"
+          pathLength="1"></path>
+      </svg>
+
+      <p data-id="messagebox" style="--top:150px">Boxes on our computer</p>
+    </div>
+  </section>
+
+  <section data-auto-animate>
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <g data-id="workingcopy">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+        <path
+          data-id="drawbox"
+          class="DrawBox"
+          d="M 720,0 l 250,0 l 0,100 l -250,0 l 0,-100"
+          pathLength="1"></path>
+      </svg>
+      <p data-id="messagebox" style="--top:150px; --left: 700px">
+        and a box up in the cloud. Usually GitHub
+      </p>
+    </div>
+  </section>
+
+  <section data-auto-animate class="overview-working-copy">
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <g data-id="workingcopy">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+        <path
+          class="DrawBox"
+          d="M 0,0 l 190,0 l 0,300 l -190,0 l 0,-300"
+          pathLength="1"></path>
+        <g data-id="working-files">
+          <File x="10" y="100" />
+          <File x="15" y="105" />
+          <File x="20" y="110" />
+        </g>
+      </svg>
+      <p data-id="messagebox" style="--top:150px; --left: 200px">
+        The folder where we have our development files is called the "working
+        area"
+      </p>
+    </div>
+  </section>
+
+  <section data-auto-animate class="overview-working-staging-area">
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <g data-id="workingcopy">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+        <path
+          class="DrawBox"
+          d="M 240,0 l 180,0 l 0,300 l -180,0 l 0,-300"
+          pathLength="1"></path>
+        <g data-id="working-files">
+          <File x="10" y="100" />
+          <File x="15" y="105" />
+          <File x="20" y="110" />
+        </g>
+      </svg>
+      <p data-id="messagebox" style="--top:150px; --left: 450px">
+        The staging area is a temporary "folder" Where you gather the files you
+        would like to store in the next "save game" / commit.<br /><br /> We'll get
+        back to what a commit is shortly
+      </p>
+    </div>
+  </section>
+
+  <section data-auto-animate class="overview-working-local-repository">
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <g data-id="workingcopy">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+        <path
+          class="DrawBox"
+          d="M 460,0 l 220,0 l 0,300 l -220,0 l 0,-300"
+          pathLength="1"></path>
+        <g data-id="working-files">
+          <File x="10" y="100" />
+          <File x="15" y="105" />
+          <File x="20" y="110" />
+        </g>
+      </svg>
+      <p data-id="messagebox" style="--top:350px; --left: 250px">
+        The Local Repository, or local repo, is where all your local commits,
+        branches etc are stored. This is where your "save games" are located.<br
+        /><br />And a branch? We'll get back to that
+      </p>
+    </div>
+  </section>
+
+  <section data-auto-animate class="overview-working-remote-repository">
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <g data-id="workingcopy">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+        <path
+          class="DrawBox"
+          d="M 720,0 l 250,0 l 0,300 l -250,0 l 0,-310"
+          pathLength="1"></path>
+        <g data-id="working-files">
+          <File x="10" y="100" />
+          <File x="15" y="105" />
+          <File x="20" y="110" />
+        </g>
+      </svg>
+      <p data-id="messagebox" style="--top:150px; --left: 250px">
+        This is your online backup, it's a copy of your local repository. This
+        is also where team members gets your code<br /><br />
+        You push, they pull, everyone has got the same
+      </p>
+    </div>
+  </section>
+
+  <section data-auto-animate class="overview-add-command">
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <defs
+          ><marker
+            id="arrowhead"
+            markerWidth="10"
+            markerHeight="7"
+            refX="8"
+            refY="3.5"
+            orient="auto"
+            ><polygon points="0 0, 10 3.5, 0 7"></polygon>
+          </marker>
+        </defs>
+        <g data-id="workingcopy">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+
+        <g data-id="working-files">
+          <File x="10" y="100" dataId="fileOneFixed" />
+          <File x="10" y="100" dataId="fileOneMoving" />
+          <File x="15" y="105" dataId="fileTwoFixed" />
+          <File x="15" y="105" dataId="fileTwoMoving" />
+          <File x="20" y="110" dataId="fileThreeFixed" />
+          <File x="20" y="110" dataId="fileThreeMoving" />
+        </g>
+        <AnnotatedArrow
+          offsetY={-10}
+          x1="180"
+          y1="45"
+          x2="246"
+          y2="45"
+          text="add"
+        />
+      </svg>
+      <p data-id="messagebox" style="--top:150px; --left: 250px">
+        Files are marked to be staged using the "add" command
+      </p>
+    </div>
+  </section>
+
+  <section data-auto-animate class="overview-add-command-move-file-1">
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <defs
+          ><marker
+            id="arrowhead"
+            markerWidth="10"
+            markerHeight="7"
+            refX="8"
+            refY="3.5"
+            orient="auto"
+            ><polygon points="0 0, 10 3.5, 0 7"></polygon>
+          </marker>
+        </defs>
+        <g data-id="workingcopy">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+
+        <g data-id="working-files" data-auto-animate-unmatched="false">
+          <File x="10" y="100" dataId="fileOneFixed" />
+          <File x="10" y="100" dataId="fileOneMoving" />
+          <File x="15" y="105" dataId="fileTwoFixed" />
+          <File x="15" y="105" dataId="fileTwoMoving" />
+          <File x="20" y="110" dataId="fileThreeFixed" class="git-added" />
+          <File x="20" y="110" dataId="fileThreeMoving" class="git-add" />
+        </g>
+        <AnnotatedArrow
+          offsetY={-10}
+          x1="180"
+          y1="45"
+          x2="246"
+          y2="45"
+          text="add"
+        />
+      </svg>
+      <p data-id="messagebox" style="--top:150px; --left: 250px">
+        You can mark individual files
+      </p>
+    </div>
+  </section>
+
+  <section data-auto-animate class="overview-add-command-move-file-all">
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <defs
+          ><marker
+            id="arrowhead"
+            markerWidth="10"
+            markerHeight="7"
+            refX="8"
+            refY="3.5"
+            orient="auto"
+            ><polygon points="0 0, 10 3.5, 0 7"></polygon>
+          </marker>
+        </defs>
+        <g data-id="workingcopy">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+
+        <g data-id="working-files">
+          <File x="10" y="100" dataId="fileOneFixed" class="git-added" />
+          <File x="10" y="100" dataId="fileOneMoving" class="git-add" />
+          <File x="15" y="105" dataId="fileTwoFixed" class="git-added" />
+          <File x="15" y="105" dataId="fileTwoMoving" class="git-add" />
+          <File x="20" y="110" dataId="fileThreeFixed" class="git-added" />
+          <File x="20" y="110" dataId="fileThreeMoving" class="git-add" />
+        </g>
+        <AnnotatedArrow
+          offsetY={-10}
+          x1="180"
+          y1="45"
+          x2="246"
+          y2="45"
+          text="add"
+        />
+      </svg>
+      <p data-id="messagebox" style="--top:150px; --left: 250px">Or multiple</p>
+    </div>
+  </section>
+
+  <section data-auto-animate class="overview-add-command-move-file-all">
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <defs
+          ><marker
+            id="arrowhead"
+            markerWidth="10"
+            markerHeight="7"
+            refX="8"
+            refY="3.5"
+            orient="auto"
+            ><polygon points="0 0, 10 3.5, 0 7"></polygon>
+          </marker>
+        </defs>
+        <g data-id="workingcopy">
+          <rect x="10" y="10" width="170" height="80"></rect>
+          <text x="95" y="50">Working Copy</text>
+        </g>
+        <g data-id="stagingarea"
+          ><rect x="250" y="10" width="160" height="80"></rect><text
+            x="330"
+            y="50">Staging Area</text
+          >
+        </g>
+        <g data-id="localrepository"
+          ><rect x="470" y="10" width="200" height="80"></rect><text
+            x="570"
+            y="50">Local Repository</text
+          >
+        </g>
+        <g data-id="remoterepository"
+          ><rect x="730" y="10" width="230" height="80"></rect><text
+            x="845"
+            y="50">Remote Repository</text
+          >
+        </g>
+
+        <g data-id="working-files">
+          <File x="10" y="100" dataId="fileOneFixed" />
+          <File x="10" y="100" dataId="fileOneMoving" />
+          <File x="15" y="105" dataId="fileTwoFixed" class="git-added" />
+          <File x="15" y="105" dataId="fileTwoMoving" class="git-add" />
+          <File x="20" y="110" dataId="fileThreeFixed" class="git-added" />
+          <File x="20" y="110" dataId="fileThreeMoving" class="git-add" />
+        </g>
+        <AnnotatedArrow
+          offsetY={-10}
+          x1="180"
+          y1="45"
+          x2="246"
+          y2="45"
+          text="add"
+        />
+      </svg>
+      <p data-id="messagebox" style="--top:150px; --left: 250px">
+        If you are not satisfied with your choices you can "unstage" a file
+        again
+      </p>
+    </div>
+  </section>
+</AgendaSection>

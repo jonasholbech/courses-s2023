@@ -1,0 +1,59 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import Explainer from "../../../components/Explainer.svelte";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+const snippets = await codeFetcher("t7/9.restdb", ["get.js"]);
+---
+
+<SlideLayout title="restDB">
+  <AgendaSection header="restDB">
+    <Goal>
+      <ol>
+        <li>Get to know RestDB</li>
+        <li>Get a little vocabulary</li>
+        <li>Know how to create a table</li>
+        <li>Creating an API key</li>
+        <li>Know how to fetch data</li>
+      </ol>
+    </Goal>
+  </AgendaSection>
+  <AgendaSection header="Get to know RestDB">
+    <section>
+      <p>Sign up for an account</p>
+      <p><a href="https://restdb.io">https://restdb.io</a></p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Get a little vocabulary">
+    <section>
+      <ol>
+        <li>Databases</li>
+        <li>Tables / Collections</li>
+        <li>Columns / Fields</li>
+        <li>Rows / Data</li>
+      </ol>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Know how to create a table">
+    <section>
+      <ol>
+        <li>Developer mode</li>
+        <li>Adding data</li>
+      </ol>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Creating an API key">
+    <section>
+      <ol>
+        <li>Settings =&gt; API =&gt; CORS</li>
+      </ol>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Know how to fetch data">
+    <section>
+      <Code code={snippets["get.js"]} />
+    </section>
+  </AgendaSection>
+</SlideLayout>

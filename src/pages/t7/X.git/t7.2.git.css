@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
+:root {
+  --r-main-font: Ubuntu, sans-serif;
+}
+.reveal {
+  font-family: var(--r-main-font);
+}
+
+rect {
+  fill: none;
+  stroke: #000;
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+}
+text {
+  dominant-baseline: middle;
+  text-anchor: middle;
+  fill: #000;
+  font-size: 1.6rem;
+}
+
+/* line {
+  stroke: #000;
+  stroke-width: 3;
+} */
+
+.canvaswrapper {
+  position: relative;
+  height: var(--slide-height);
+  width: var(--slide-width);
+  margin: 0;
+  padding: 0;
+}
+.canvaswrapper > * {
+  position: absolute;
+  top: var(--top, 0);
+  left: var(--left, 0);
+}
+circle {
+  fill: #000;
+  stroke: #000;
+  stroke-width: 3;
+}
+
+.present:not(.stack) .fall {
+  opacity: 0;
+  animation: 1s var(--delay, 0s) fall forwards;
+}
+@keyframes fall {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.present:not(.stack) .DrawBox {
+  fill: none;
+  stroke: #000;
+  stroke-dasharray: 1px;
+  stroke-dashoffset: 1px;
+  animation: draw 3s forwards;
+}
+
+.present:not(.stack) .git-add {
+  scale: 0.5;
+}
+.present:not(.stack) .git-added path:first-child {
+  transition: all 1s;
+  fill: #d3d3d3;
+}
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+[data-id="messagebox"] {
+  max-width: 42ch;
+}

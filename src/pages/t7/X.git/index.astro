@@ -1,0 +1,32 @@
+---
+import "./t7.2.git.css";
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import Introduction from "./subpages/Introduction.astro";
+import OverView from "./subpages/OverView.astro";
+---
+
+<SlideLayout title="Introduction" loadTheme={false} stylesheet="">
+  <Introduction />
+  <OverView />
+  <!-- <section data-auto-animate>
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <circle data-id="1" cx="25" cy="25" r="10"></circle>
+      </svg>
+    </div>
+  </section>
+
+  <section data-auto-animate>
+    <div class="canvaswrapper">
+      <svg class="canvas" viewBox="0 0 1000 1000">
+        <circle data-id="1" cx="25" cy="25" r="10"></circle>
+        <g data-id="c2">
+          <line x1="25" y1="25" x2="100" y2="25"></line>
+          <circle cx="100" cy="25" r="10"></circle>
+        </g>
+      </svg>
+    </div>
+  </section> -->
+</SlideLayout>
+
+<style></style>
