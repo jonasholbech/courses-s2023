@@ -5,4 +5,4 @@ fetch("someurl", {
   },
 })
   .then((e) => e.json())
-  .then((e) => console.log(e));
+  .then(doSomething);
