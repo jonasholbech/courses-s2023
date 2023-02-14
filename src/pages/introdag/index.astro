@@ -1,11 +1,11 @@
 ---
-import SlideLayout from "../../../layouts/SlideLayout.astro";
-import codeFetcher from "../../../js/codeFetcher";
-import Code from "../../../components/Code.astro";
-import Explainer from "../../../components/Explainer.svelte";
-import AgendaSection from "../../../components/AgendaSection.astro";
-import Goal from "../../../components/Goal.astro";
-const snippets = await codeFetcher("t7/9.restdb", ["get.js"]);
+import SlideLayout from "../../layouts/SlideLayout.astro";
+import codeFetcher from "../../js/codeFetcher";
+import Code from "../../components/Code.astro";
+import Explainer from "../../components/Explainer.svelte";
+import AgendaSection from "../../components/AgendaSection.astro";
+import Goal from "../../components/Goal.astro";
+const snippets = await codeFetcher("introdag", []);
 ---
 
 <SlideLayout title="Introdag for nye medarbejdere">
@@ -19,7 +19,7 @@ const snippets = await codeFetcher("t7/9.restdb", ["get.js"]);
         <span class="fragment">ITU</span>
         <span class="fragment">=&gt;</span>
         <span class="fragment">RTS</span>
-        <span class="fragment">=gt;</span>
+        <span class="fragment">=&gt;</span>
         <span class="fragment">KEA</span>
       </li>
     </ul>

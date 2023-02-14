@@ -1,0 +1,32 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import Explainer from "../../../components/Explainer.svelte";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+const snippets = await codeFetcher("t7/11.technical-documentation", []);
+---
+
+<SlideLayout title="Teknisk Dokumentation">
+  <AgendaSection header="Teknisk" h2="Dokumentation">
+    <section>
+      <Goal>
+        <ol>
+          <li>Få lidt inspiration til hvad vi kan dokumentere</li>
+          <li>Og hvordan vi kan gøre det</li>
+        </ol>
+      </Goal>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="Udkast">
+    <section>
+      <p>
+        Proces / Teknisk-dokumentation (herunder): Dokumenteret pageweight,
+        lighthouse mobile/desktop diagrammer? database struktur? filstruktur?
+        GitHub? “linking code snippets to the UI?” Url parametre?
+      </p>
+    </section>
+  </AgendaSection>
+</SlideLayout>
