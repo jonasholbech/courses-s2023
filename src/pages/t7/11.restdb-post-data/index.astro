@@ -1,0 +1,74 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import Explainer from "../../../components/Explainer.svelte";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+const snippets = await codeFetcher("t7/11.restdb-post-data", [
+  "form1.js",
+  "form2.js",
+  "form3.js",
+  "form4.js",
+  "post1.js",
+  "post2.js",
+  "post3.js",
+  "post4.js",
+  "post.js",
+]);
+---
+
+<SlideLayout title="RestDB - posting data">
+  <AgendaSection header="RestDB - posting data">
+    <Goal>
+      <ol>
+        <li>See how to pick up form data</li>
+        <li>See how to send it in a way RestDB / the browser understands</li>
+        <li>See the full code needed</li>
+        <li>Coding up a simple solution</li>
+      </ol>
+    </Goal>
+  </AgendaSection>
+
+  <AgendaSection header="Steps" h2="RestDB">
+    <section>
+      <p>RestDB API key must allow POST</p>
+    </section>
+    <section data-auto-animate>
+      <Code dataId="postanimation" code={snippets["post1.js"]} />
+    </section>
+    <section data-auto-animate>
+      <Code dataId="postanimation" code={snippets["post2.js"]} />
+    </section>
+    <section data-auto-animate>
+      <Code dataId="postanimation" code={snippets["post3.js"]} />
+    </section>
+    <section data-auto-animate>
+      <Code dataId="postanimation" code={snippets["post4.js"]} />
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Steps" h2="The Form">
+    <section>
+      <p>
+        We must have a form where the <code>name</code> attributes match the columns
+        in RestDB
+      </p>
+    </section>
+    <section data-auto-animate>
+      <p>We need an eventlistener that tells us when the form is submitted</p>
+      <Code dataId="postanimation" code={snippets["form1.js"]} />
+    </section>
+    <section data-auto-animate>
+      <p>Since the browser will try to refresh, we need to prevent that</p>
+      <Code dataId="postanimation" code={snippets["form2.js"]} />
+    </section>
+    <section data-auto-animate>
+      <p>Once submitted, we can pull out the data from the form</p>
+      <Code dataId="postanimation" code={snippets["form3.js"]} />
+    </section>
+    <section data-auto-animate>
+      <p>And store it in an object, ready for the database</p>
+      <Code dataId="postanimation" code={snippets["form4.js"]} />
+    </section>
+  </AgendaSection>
+</SlideLayout>
