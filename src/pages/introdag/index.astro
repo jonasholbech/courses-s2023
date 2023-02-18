@@ -9,79 +9,119 @@ const snippets = await codeFetcher("introdag", []);
 ---
 
 <SlideLayout title="Introdag for nye medarbejdere">
-  <section>
-    <h3>Om mig</h3>
-    <ul>
-      <li>Cand. IT</li>
-      <li>Fag-nørd</li>
-      <li>Underviser</li>
-      <li>
-        <span class="fragment">ITU</span>
-        <span class="fragment">=&gt;</span>
-        <span class="fragment">RTS</span>
-        <span class="fragment">=&gt;</span>
-        <span class="fragment">KEA</span>
-      </li>
-    </ul>
-  </section>
-  <section>
-    <blockquote>
-      <p>
-        Derfor håber jeg meget, at du er med på at holde ca 20 minutters oplæg
-        om, hvad du går op i i din undervisning og hvad du lægger særligt vægt
-        på.
-      </p>
-      <p>
-        Det er ikke alle deltagerne (nye kollegaer) der er undervisere, men ”vi
-        andre” kan også finde god inspiration i at høre lidt fra
-        underviser-siden, som vi måske ikke har så meget at gøre med til
-        hverdag, men som er kernen i KEA.
-      </p>
-    </blockquote>
-  </section>
-  <section>
-    <blockquote>
-      <p>Det handler om at optimere hvad der kan optimeres</p>
-    </blockquote>
-  </section>
-  <section>
-    <h2>Ting der er sværre at gøre noget ved</h2>
-    <h2>Ting vi kan gøre noget ved</h2>
-    <h2>Cowboy-Tricks???</h2>
-  </section>
-  <AgendaSection header="Ting der er" h2="sværre at" h3="gøre noget ved">
+  <AgendaSection header="Introdag" p="Jonas Holbech">
     <section>
-      <p>Retorik</p>
-      <p>Demagogik</p>
-      <p>Klasseledelse</p>
-      <p>Lyst</p>
+      <h3>Målet for denne session</h3>
+      <ul>
+        <li>Hvad skal jeg snakke om</li>
+        <li>Lidt om mig</li>
+        <li>Hvad er vigtigt</li>
+      </ul>
+    </section>
+    <section>
+      <blockquote>
+        <p>
+          Derfor håber jeg meget, at du er med på at holde ca 20 minutters oplæg
+          om, <span class="fragment highlight-blue">
+            hvad du går op i, i din undervisning, og hvad du lægger særligt vægt
+            på.</span
+          >
+        </p>
+        <p>
+          Det er ikke alle deltagerne (nye kollegaer) der er undervisere, men
+          "vi andre" kan også finde god inspiration i at høre lidt fra
+          underviser-siden, som vi måske ikke har så meget at gøre med til
+          hverdag, men som er kernen i KEA.
+        </p>
+      </blockquote>
     </section>
   </AgendaSection>
-  <AgendaSection header="Ting" h2="vi kan gøre noget ved">
+  <AgendaSection header="Om mig">
+    <section>
+      <ul>
+        <li>Jonas (Fannikke) Holbech</li>
+        <li>Cand. IT</li>
+        <li>Fag-nørd</li>
+        <li>
+          Underviser
+          <ul>
+            <li class="fragment">ITU ⬇️</li>
+            <li class="fragment">RTS / KTS ⬇️</li>
+            <li class="fragment">KEA</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="Hvad er vigtigt" h2="I undervisningen">
+    <section>
+      <ul>
+        <li>Struktur</li>
+        <li>fag-fællesskaber</li>
+      </ul>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Struktur">
     <section>
       <p>Struktur</p>
       <p class="fragment">Struktur</p>
       <p class="fragment">Struktur</p>
+      <p class="fragment">
+        <code
+          >Måske særligt vigtigt for mig da jeg nok ikke er SÅ struktureret</code
+        >
+      </p>
     </section>
     <section>
-      <p>Hilbert Meyer</p>
+      <h2>Hilbert Meyer</h2>
+      <p>Tysk didaktiker</p>
+      <p>10 kendetegn på god undervisning</p>
+    </section>
+    <section>
+      <ol>
+        <li>
+          Klar strukturering af undervisningen<br /><small
+            >"Rød tråd", klarhed i opgaverne</small
+          >
+        </li>
+        <li>
+          En betydelig mængde ægte læretid<br /><small
+            >Tiden bruges på læringsrelevante aktiviteter - ikke på praktiske
+            problemer el. lign</small
+          >
+        </li>
+      </ol>
+    </section>
+    <section>
+      <ol start="5">
+        <li>
+          Meningsdannende kommunikation<br /><small>
+            Deltagelse i planlægningen - dialog mellem deltagere og underviser</small
+          >
+        </li>
+        <li value="8">
+          Intelligent træning<br /><small
+            >Bevidstgørelse af læringsstrategier</small
+          >
+        </li>
+      </ol>
     </section>
   </AgendaSection>
-  <section>
-    <p>notes</p>
-    <p>praktik</p>
-    <p>dobbelt faglighed</p>
-    <p></p>
-  </section>
-  <AgendaSection header="Introdag for nye medarbejdere">
-    <Goal>
-      <ol>
-        <li>Get to know RestDB</li>
-        <li>Get a little vocabulary</li>
-        <li>Know how to create a table</li>
-        <li>Creating an API key</li>
-        <li>Know how to fetch data</li>
-      </ol>
-    </Goal>
+
+  <AgendaSection h2="fag-fællesskaber">
+    <section>
+      <p>Løse noter her fra</p>
+      <p>Fag-fællesskab</p>
+      <p>ChatGPT</p>
+      <p>Dele kode</p>
+      <p>gamle studerende ind</p>
+      <p>fokus på hvad andre har syntes var svært</p>
+    </section>
   </AgendaSection>
+
+  <section>
+    <p>egen praktik</p>
+    <p>dobbelt faglighed</p>
+  </section>
 </SlideLayout>
