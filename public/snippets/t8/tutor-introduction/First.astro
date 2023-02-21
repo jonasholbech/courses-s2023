@@ -1,0 +1,16 @@
+---
+const { prop1, prop2 } = Astro.props;
+//or const prop1 = Astro.props.prop1
+---
+
+<section>
+  <h3>{prop1}</h3>
+  <button>Click me</button>
+</section>
+
+<style>
+  /* scoped styling per default */
+  button {
+    background: hotpink;
+  }
+</style>

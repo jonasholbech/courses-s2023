@@ -1,0 +1,13 @@
+<!-- PARENT -->
+<MyContainer header="hello">
+  <img src="..." />
+  <button>Do stuff</button>
+</MyContainer>
+
+<!--MyContainer -->
+--- const {header} = Astro.props; ---
+
+<article>
+  <h2>{header}</h2>
+  <slot />
+</article>

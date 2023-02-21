@@ -1,0 +1,14 @@
+---
+const { type = "primary", size = "medium" } = Astro.props;
+---
+
+<button data-type={type} data-size={size}><slot /></button>
+
+<style>
+  [data-type="primary"] {
+    background: blue;
+  }
+  [data-type="secondary"] {
+    background: white;
+  }
+</style>

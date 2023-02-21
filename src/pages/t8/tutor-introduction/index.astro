@@ -1,0 +1,188 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+
+const snippets = await codeFetcher("t8/tutor-introduction", [
+  "First.astro",
+  "Props.astro",
+  "Slot.astro",
+  "Conditional.astro",
+]);
+---
+
+<SlideLayout title="Astro">
+  <AgendaSection header="Astro">
+    <section>
+      <a href="https://astro.build">https://astro.build</a>
+    </section>
+  </AgendaSection>
+  <section>
+    <Goal>
+      <ol>
+        <li>Know enough about Astro to help 2nd sem students</li>
+      </ol>
+    </Goal>
+  </section>
+
+  <section>
+    <h2>What is Astro?</h2>
+    <ul>
+      <li>React without state</li>
+      <li>A static site generator / SSG framework</li>
+      <li>
+        We write JSX (Vue+React+Svelte flavoured), but the out put is HTML +
+        CSS, nothing else
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Why?</h2>
+    <p>Components</p>
+    <p>Group work</p>
+    <p>Performance</p>
+    <p>Sustainability</p>
+  </section>
+  <section>
+    <p>Our usage</p>
+    <p>vs</p>
+    <p>What Astro can do</p>
+    <ul class="fragment">
+      <li>Island architecture</li>
+      <li>SSG / SSR</li>
+    </ul>
+  </section>
+
+  <AgendaSection header="Install">
+    <section>
+      <p><code>npm create astro@latest</code></p>
+      <p class="fragment"><code>.</code> or <code>project_name</code>?</p>
+      <p class="fragment">Student trap #1</p>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="The Folders">
+    <section>
+      <p>Anything we don't know?</p>
+      <p>It's basically just Next.js</p>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="<code>npm run dev</code>">
+    <section>
+      <p>Starting / stopping the server</p>
+      <p class="fragment">terminal or package.json?</p>
+      <p class="fragment">Student trap #2</p>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="Basic" h2="components">
+    <section>
+      <p><code>First.astro</code></p>
+      <Code code={snippets["First.astro"]} language="js" stretch />
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="import">
+    <section>
+      <p>As usual</p>
+      <p><code>import First from "../components/First.astro";</code></p>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="<code>props</code>">
+    <section>
+      <p>As usual, but....</p>
+      <p>It renders to static HTML, there's no passing callbacks</p>
+      <p>But variables, arrays, objects etc are all good</p>
+    </section>
+    <section>
+      <Code code={snippets["Props.astro"]} language="jsx" stretch />
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="<code>slot</code>">
+    <section>
+      <p>&lt;slot /&gt; == <code>props.children</code></p>
+    </section>
+    <section>
+      <Code code={snippets["Slot.astro"]} language="jsx" stretch />
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="Styling">
+    <section>
+      <p>Two options</p>
+      <p>No examples, just a talk</p>
+      <p>Have you tried scoped CSS?</p>
+      <p class="fragment">Student trap #3</p>
+    </section>
+    <section>
+      <p>How I think we're going to use it "conditionally"</p>
+      <Code code={snippets["Conditional.astro"]} language="jsx" stretch />
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="Student trap #4">
+    <section>
+      <p><code>npm install</code> after clone</p>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="pages">
+    <section>
+      <p>Simple pages, just go in <code>pages/</code></p>
+    </section>
+    <section>
+      <p>Advanced, Next-like-stuff</p>
+      <p>
+        <a href="https://github.com/jonasholbech/fashionrus-astro"
+          >https://github.com/jonasholbech/fashionrus-astro</a
+        >
+      </p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="layouts" />
+  <AgendaSection header="custom properties" />
+  <AgendaSection header="conditional styling" />
+  <AgendaSection header="deployment" />
+  <AgendaSection header="web hooks" />
+
+  <AgendaSection header="notes / ressources">
+    <section>
+      <pre>
+        frontmatter - build time
+  
+  scripts
+  
+  - props are untouchable
+  - data fetching
+  - route mapping
+  
+  https://pgp0jcds.directus.app/items/technologies?fields=*,logo.*
+  
+  https://pgp0jcds.directus.app/assets/13812d19-dd71-4f54-9ca6-fe9cb195676f
+
+  kea-alt-del.dk/t7/api
+  
+  transformation keys
+  
+  - smallsize
+  - thumb400
+      </pre>
+    </section>
+  </AgendaSection>
+</SlideLayout>
+
+<!--
+
+  <Code
+        code={snippets["First.astro"]}
+        language="js"
+        startFrom="1"
+        lineNumbers="1-2|1-5|7|9-11|13-15"
+        stretch
+      />
+ -->
