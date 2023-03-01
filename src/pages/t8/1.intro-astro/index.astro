@@ -125,17 +125,57 @@ const snippets = await codeFetcher("t8/1.intro-astro", []);
       <img data-src="/assets/t8/1.intro-astro/spotify.webp" alt="" />
     </section>
   </AgendaSection>
-  <AgendaSection header="node">
+  <AgendaSection header="<code>node.js</code>">
     <section>
-      <blockquote>
-        <p>Hvad er det der node i har installeret</p>
-        <p>hvad er node_modules</p>
-
-        <p>
-          og hvorfor i aldrig må lægge jeres projekter i Dropbox, iCloud,
-          OneDrive etc, .nosync
-        </p>
-      </blockquote>
+      <p>
+        Open source server-miljø der kan køre på Windows, Linux, Unix, macOS
+        m.fl.
+      </p>
+      <p>
+        Backend JavaScript runtime miljø som kører JavaScript uden for en
+        webbrowser
+      </p>
+      <p>
+        Node.js kan snakke direkte med eks databaser, fordi det ikke hentes ned
+        i browseren, kan det gøres sikkert
+      </p>
+    </section>
+    <section>
+      <p>Det API i arbejde op i mod i starten af T7 var skrevet i node.js</p>
+      <p></p>
+    </section>
+  </AgendaSection>
+  <AgendaSection h2="<code>node_modules</code>">
+    <section>
+      <p>
+        Når vi arbejder med Node.js og NPM (senere) får vi en mappe der hedder <code
+          >node_modules</code
+        >
+      </p>
+      <p>Den skal IKKE på GitHub</p>
+    </section>
+    <section>
+      <img data-src="/assets/t8/1.intro-astro/node_modules.webp" alt="" />
+    </section>
+    <section>
+      <p>Det betyder også at i VIRKELIGT ikke bør lægge jeres projekter i</p>
+      <ul>
+        <li>Dropbox</li>
+        <li>Drive</li>
+        <li>OneDrive</li>
+        <li>iCloud</li>
+        <li>etc</li>
+      </ul>
+      <p>Det går "sinds" langsomt <span class="fragment">🤣</span></p>
+      <p>Det laver sygt mange problemer</p>
+    </section>
+    <section>
+      <p><kbd>.nosync</kbd></p>
+      <p class="fragment">Dannie?</p>
+    </section>
+    <section>
+      <p>Der findes en let måde at rydde op i <code>node_modules</code></p>
+      <p>Men den tager vi en anden dag når vi har lidt erfaring</p>
     </section>
   </AgendaSection>
   <AgendaSection header="Øvelse #2">
