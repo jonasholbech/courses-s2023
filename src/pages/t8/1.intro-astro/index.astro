@@ -1,0 +1,158 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import Explainer from "../../../components/Explainer.svelte";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+
+const snippets = await codeFetcher("t8/1.intro-astro", []);
+---
+
+<SlideLayout title="Astro">
+  <AgendaSection header="Astro">
+    <section>
+      <a href="https://astro.build">https://astro.build</a>
+    </section>
+  </AgendaSection>
+  <section>
+    <Goal>
+      <ol>
+        <li>Recognize components</li>
+        <li>Use components</li>
+        <li>Use props</li>
+        <li>Style components</li>
+      </ol>
+    </Goal>
+  </section>
+  <AgendaSection header="Hvad er Astro">
+    <section>
+      <ul>
+        <li>1. semester lavede i "statiske sites"</li>
+        <li class="fragment">På Web II lavede i "dynamiske sites"</li>
+        <li class="fragment">Nu skal vi lave statiske sites igen</li>
+        <li class="fragment">But.... why?</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Derfor!</h2>
+      <ol>
+        <li>Astro er en <code>static site generator</code></li>
+        <li class="fragment">
+          I Astro arbejder vi med components. Små isolerede kode blokke der kan
+          stykkes sammen og genbruges. Lidt ligesom templates
+        </li>
+        <li class="fragment">Statiske sites er hurtigere</li>
+        <li class="fragment">Og mere bæredygtige</li>
+      </ol>
+    </section>
+    <section>
+      <h4><code>static site generator?</code></h4>
+      <p>
+        En static site builder bygger et færdigt site og uploader det. Hvis der
+        er nogle serverkald til et (headless) CMS ,fx RestDB eller Directus,
+        forgår de før sitet bliver uploadet og de elementer eller sider der
+        bliver genereret, bliver bygget før sitet uploades.
+      </p>
+    </section>
+    <section>
+      <h4><code>static site generator?</code></h4>
+
+      <p>
+        Det betyder jo så også at hvis der bliver ændret noget i CMS'et, vil
+        ændringen ikke være synlig før sitet er buildet og uploadet igen.
+      </p>
+    </section>
+    <section>
+      <h4><code>static site generator?</code></h4>
+
+      <p>
+        Der ville et dynamisk site jo bare få tilført det ændrede indhold og
+        generere en ny sneaker eller hvad det nu kunne være.
+      </p>
+    </section>
+    <section>
+      <h4><code>static site generator?</code></h4>
+
+      <p>
+        En static site builder er et værktøj, der genererer et fuldt statisk
+        HTML-site baseret på rå data og et sæt skabeloner.
+      </p><p>
+        Grundlæggende automatiserer en static site builder opgaven med at kode
+        individuelle HTML-sider og gør disse sider klar til at blive vist til
+        brugerne på forhånd. Fordi disse HTML-sider er byggede på forhånd, kan
+        de indlæses meget hurtigt i brugernes browsere.
+      </p>
+    </section>
+    <section>
+      <p>Nu skriver i kode der ikke virker i browseren!!</p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Øvelse #1">
+    <section>
+      <h3>Se components</h3>
+      <p>Hvad er en component?</p>
+      <ol>
+        <li>En genbrugelig skabelon</li>
+        <li>Der (som en funktion) kan modtage data</li>
+        <li>Vise dataen, og handle på baggrund af data</li>
+        <li>Men alt kan gøres til en component</li>
+      </ol>
+    </section>
+    <section>
+      <ol start="5">
+        <li>Det gør vores kode genbrugelig</li>
+        <li>Og gør vi kan dele den op i bider</li>
+        <li>Hvis noget html skal copy pastes, så er det nok en component</li>
+        <li>
+          Hvis du kan give det et navn (a la footer) så er det nok en component
+        </li>
+      </ol>
+    </section>
+    <section>
+      <img data-src="/assets/t8/1.intro-astro/fronter.webp" alt="" />
+    </section>
+    <section>
+      <h2>Jeres tur</h2>
+      <p>15 minutter</p>
+      <p>Breakout rooms?</p>
+      <p>Identificér components på de to billeder</p>
+    </section>
+    <section>
+      <img width="600" data-src="/assets/t8/1.intro-astro/astro.webp" alt="" />
+    </section>
+    <section>
+      <img data-src="/assets/t8/1.intro-astro/spotify.webp" alt="" />
+    </section>
+  </AgendaSection>
+  <AgendaSection header="node">
+    <section>
+      <blockquote>
+        <p>Hvad er det der node i har installeret</p>
+        <p>hvad er node_modules</p>
+
+        <p>
+          og hvorfor i aldrig må lægge jeres projekter i Dropbox, iCloud,
+          OneDrive etc, .nosync
+        </p>
+      </blockquote>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Øvelse #2">
+    <section>
+      <p>Intro til opgaven</p>
+      <p>Status møde klokken 10:30</p>
+    </section>
+  </AgendaSection>
+</SlideLayout>
+
+<!--
+
+  <Code
+        code={snippets["First.astro"]}
+        language="js"
+        startFrom="1"
+        lineNumbers="1-2|1-5|7|9-11|13-15"
+        stretch
+      />
+ -->

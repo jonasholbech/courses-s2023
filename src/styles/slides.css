@@ -242,3 +242,8 @@ rect {
 .reveal .controls .navigate-right.enabled {
   border-left-color: orange;
 }
+
+rect.red {
+  stroke: red;
+  stroke-dasharray: 0;
+}
