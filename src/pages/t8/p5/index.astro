@@ -1,0 +1,139 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import Explainer from "../../../components/Explainer.svelte";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+
+const snippets = await codeFetcher("t8/p5", [
+  "starter.txt",
+  "setup.js",
+  "draw.js",
+  "basic-structure.js",
+]);
+---
+
+<SlideLayout title="P5">
+  <AgendaSection header="P5">
+    <section>
+      <a href="https://p5js.org/">https://p5js.org/</a>
+    </section>
+  </AgendaSection>
+  <section>
+    <Goal>
+      <ol>
+        <li>play with P5 / processing</li>
+      </ol>
+    </Goal>
+  </section>
+  <section>
+    <blockquote>
+      p5.js is a JavaScript library for creative coding, with a focus on making
+      coding accessible and inclusive for artists, designers, educators,
+      beginners, and anyone else!
+    </blockquote>
+  </section>
+  <AgendaSection header="Playground / Sandbox">
+    <section>
+      <p><a href="https://editor.p5js.org/">https://editor.p5js.org/</a></p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="setup">
+    <section>
+      <p>
+        <a href="https://p5js.org/get-started/#settingUp"
+          >https://p5js.org/get-started/#settingUp</a
+        >
+      </p>
+    </section>
+    <section>
+      <Code
+        code={snippets["starter.txt"]}
+        language="html"
+        startFrom="1"
+        lineNumbers="1-20|7,12"
+        stretch
+      />
+    </section>
+  </AgendaSection>
+  <AgendaSection header="MAGIC!!!!!!">
+    <section>
+      <p>In order to work with frameworks, we have to beleive in magic</p>
+      <p class="fragment">magic functions</p>
+      <p class="fragment">magic variables</p>
+    </section>
+    <section>
+      <p><code>setup</code> is called once for us</p>
+      <Code code={snippets["setup.js"]} language="js" startFrom="1" />
+    </section>
+    <section>
+      <p><code>draw</code> is called for us "often"</p>
+      <Code code={snippets["draw.js"]} language="js" startFrom="1" />
+      <p>
+        It basically re-draws the "canvas" between 24 and 120 times per second
+      </p>
+    </section>
+    <section>
+      <p>Basic structure</p>
+      <Code code={snippets["basic-structure.js"]} language="js" startFrom="1" />
+    </section>
+  </AgendaSection>
+  <AgendaSection header="other magic stuff">
+    <section>
+      <h2>Magic functions</h2>
+    </section>
+    <section>
+      <p><code>mouseClicked()</code></p>
+      <p>
+        <a href="https://p5js.org/reference/#/p5/mouseClicked"
+          >https://p5js.org/reference/#/p5/mouseClicked</a
+        >
+      </p>
+      <p><code>mouseDragged()</code></p>
+      <p>
+        <a href="https://p5js.org/reference/#/p5/mouseDragged"
+          >https://p5js.org/reference/#/p5/mouseDragged</a
+        >
+      </p>
+    </section>
+    <section>
+      <h2>Magic variables</h2>
+    </section>
+    <section>
+      <p><code>width</code></p>
+      <p>
+        <a href="https://p5js.org/reference/#/p5/width"
+          >https://p5js.org/reference/#/p5/width</a
+        >
+      </p>
+      <p><code>mouseX</code></p>
+      <p>
+        <a href="https://p5js.org/reference/#/p5/mouseX"
+          >https://p5js.org/reference/#/p5/mouseX</a
+        >
+      </p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="documentation">
+    <section>
+      <p>
+        <a href="https://p5js.org/reference/">https://p5js.org/reference/</a>
+      </p>
+    </section>
+    <section>
+      <p>Let's play</p>
+    </section>
+  </AgendaSection>
+</SlideLayout>
+
+<!--
+
+  <Code
+        code={snippets["First.astro"]}
+        language="js"
+        startFrom="1"
+        lineNumbers="1-2|1-5|7|9-11|13-15"
+        stretch
+      />
+ -->
