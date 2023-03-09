@@ -71,7 +71,9 @@ const snippets = await codeFetcher("t8/p5", [
       <p><code>draw</code> is called for us "often"</p>
       <Code code={snippets["draw.js"]} language="js" startFrom="1" />
       <p>
-        It basically re-draws the "canvas" between 24 and 120 times per second
+        It basically re-draws the "canvas" between 24 and 120 (<code
+          >frameRate</code
+        >) times per second
       </p>
     </section>
     <section>
@@ -153,6 +155,10 @@ const snippets = await codeFetcher("t8/p5", [
     </section>
     <section>
       <p>Let's play</p>
+      <p>
+        <a href="https://github.com/jonasholbech/first-p5"
+          >https://github.com/jonasholbech/first-p5</a>
+      </p>
     </section>
   </AgendaSection>
 </SlideLayout>
