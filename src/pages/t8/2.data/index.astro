@@ -1,0 +1,242 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import Explainer from "../../../components/Explainer.svelte";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+
+const snippets = await codeFetcher("t8/2.data", [
+  "frontmatter.astro",
+  "fetch-chain.js",
+  "fetch-async.js",
+  "fetch-astro.astro",
+  "fetch-astro-debugger.astro",
+  "foreach-map.js",
+  "arrays-astro.astro",
+  "arrays-astro-components.astro",
+  "full-map-example.astro",
+  "script-loading.astro",
+]);
+---
+
+<SlideLayout title="Astro - Data">
+  <AgendaSection header="Astro - Data">
+    <section>
+      <Goal>
+        <ol>
+          <li>Be able to fetch data in Astro</li>
+          <li>Modify <code>.map</code></li>
+          <li>Understand the difference between build time and client side</li>
+        </ol>
+      </Goal>
+    </section>
+    <section>
+      <h2>Agenda</h2>
+      <ol>
+        <li>Frontmatter (build time)</li>
+        <li>Data fetching</li>
+        <li>Mapping</li>
+        <li>Client side scripts</li>
+        <li>Se video om vores nye database</li>
+        <li>Vejledning</li>
+        <li>Obligatorisk projektvejledning:</li>
+      </ol>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Frontmatter">
+    <section>
+      <p>Whatever we write between</p>
+      <pre><code>---
+---</code></pre>
+      <p>is called "frontmatter"</p>
+      <p>And it only runs on "build time"</p>
+      <p class="fragment">Build time?</p>
+    </section>
+    <section>
+      <Code
+        code={snippets["frontmatter.astro"]}
+        language="js"
+        startFrom="1"
+        stretch
+      />
+      <p>
+        The code runs and prints out the current time when we run <code
+          >npm run dev</code
+        >
+      </p>
+      <p>But with <code>npm run build</code> it's fixed at build time</p>
+    </section>
+    <section>
+      <p>It's "static"</p>
+      <p>You have to deploy again to update it</p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Data Fetching">
+    <section>
+      <h2><code>fetch</code></h2>
+      <h3>two syntaxes</h3>
+    </section>
+    <section>
+      <h3>What we've been doing</h3>
+      <Code code={snippets["fetch-chain.js"]} language="js" startFrom="1" />
+    </section>
+    <section>
+      <h3>What we could have been doing</h3>
+      <Code code={snippets["fetch-async.js"]} language="js" startFrom="1" />
+    </section>
+    <section>
+      <h3>How Astro allows / requires us to do it</h3>
+      <p>(this only works in Astro, not in vanilla JS)</p>
+      <Code code={snippets["fetch-astro.astro"]} language="js" startFrom="1" />
+    </section>
+    <section>
+      <p>Let's try to get some data, and <code>console.log</code> it</p>
+    </section>
+    <section>
+      <p>Debugging</p>
+      <p class="fragment">
+        Our <code>console.log</code> ends up in the Terminal, WTF?
+      </p>
+      <p>
+        <a
+          href="https://docs.astro.build/en/reference/api-reference/#built-in-components"
+          >https://docs.astro.build/en/reference/api-reference/#built-in-components</a
+        >
+      </p>
+    </section>
+    <section>
+      <Code
+        code={snippets["fetch-astro-debugger.astro"]}
+        language="js"
+        startFrom="1"
+        lineNumbers="8|10-13"
+      />
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Mapping">
+    <section>
+      <p>OK, now I got my data, now what?</p>
+      <p class="fragment"><code>forEach</code> vs <code>map</code></p>
+      <Code
+        code={snippets["foreach-map.js"]}
+        language="js"
+        startFrom="1"
+        lineNumbers="1|3-6|8-12"
+        stretch
+      />
+    </section>
+    <section>
+      <p>
+        So, with <code>forEach</code> we loop through stuff and do something
+      </p>
+      <p>
+        With <code>map</code> we loop through stuff, and return something, creating
+        a new array
+      </p>
+    </section>
+    <section>
+      <p>Example</p>
+    </section>
+    <section>
+      <p>Astro render arrays of elements for us</p>
+      <Code code={snippets["arrays-astro.astro"]} language="js" startFrom="1" />
+    </section>
+    <section>
+      <p>Or even components</p>
+      <Code
+        code={snippets["arrays-astro-components.astro"]}
+        language="js"
+        startFrom="1"
+      />
+    </section>
+    <section>
+      <p>So all we need is</p>
+      <ol>
+        <li>fetch some data</li>
+        <li><code>map</code> through it and</li>
+        <li><code>return</code> some HTML or a component</li>
+      </ol>
+    </section>
+    <section>
+      <h2>CPM?</h2>
+    </section>
+    <section>
+      <Code
+        code={snippets["full-map-example.astro"]}
+        language="js"
+        startFrom="1"
+        stretch
+      />
+    </section>
+    <section>
+      <p>Wanna go live to our man in the field?</p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Client side scripts">
+    <section>
+      <h3>Client side script?</h3>
+      <p>What we wrote before Astro</p>
+    </section>
+    <section>
+      <Code
+        code={snippets["script-loading.astro"]}
+        language="js"
+        startFrom="1"
+      />
+      <p class="fragment">
+        If your component is used several times on a page, the script will only
+        be included once.
+      </p>
+    </section>
+    <section>
+      <h3>Recommendation</h3>
+      <p>Put your script files inside <code>src/</code></p>
+      <p>That way Astro will optimize/minimize it for you</p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="The rest of the day">
+    <section>
+      <h2>Videos</h2>
+      <p>Remember RestDB?</p>
+      <p>
+        A <a
+          href="https://www.youtube.com/playlist?list=PLCx1FpZ4Dtb2TPGqqf_w21kksoRUA_MD0"
+          >new playlist</a
+        > about a new system
+      </p>
+      <p class="fragment">Directus</p>
+    </section>
+    <section>
+      <h3>Coaching</h3>
+    </section>
+    <section>
+      <h3>P5</h3>
+      <p>I promised some of you we would play with P5 at 14:15</p>
+      <p>Join us, it's not that hard</p>
+    </section>
+    <section>
+      <p>The Astro tutorial</p>
+      <p>
+        <a href="https://docs.astro.build/en/tutorial/0-introduction/"
+          >https://docs.astro.build/en/tutorial/0-introduction/</a
+        >
+      </p>
+    </section>
+    <section>
+      <h3>Obligatorisk projektvejledning</h3>
+      <p>Have you signed up?</p>
+    </section>
+  </AgendaSection>
+</SlideLayout>
+
+<!--
+
+  <Code
+        code={snippets["First.astro"]}
+        language="js"
+        startFrom="1"
+        lineNumbers="1-2|1-5|7|9-11|13-15"
+        stretch
+      />
+ -->

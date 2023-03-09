@@ -1,0 +1,13 @@
+---
+import { Debug } from "astro/components";
+const response = await fetch("...");
+const data = await response.json();
+//now do something with the data
+---
+
+<Debug {data} />
+<!-- or -->
+<details>
+  <summary>Debugger</summary>
+  <Debug {data} />
+</details>
