@@ -1,0 +1,6 @@
+# Example: Static routes
+src/pages/index.astro        -> mysite.com/
+src/pages/about.astro        -> mysite.com/about
+src/pages/about/index.astro  -> mysite.com/about
+src/pages/about/me.astro     -> mysite.com/about/me
+src/pages/posts/1.md         -> mysite.com/posts/1

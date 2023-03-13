@@ -1,0 +1,146 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import Explainer from "../../../components/Explainer.svelte";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+
+const snippets = await codeFetcher("t8/3.routes", [
+  "routes.txt",
+  "[dog].astro",
+  "[dog-advanced].astro",
+  "[post-fetch].astro",
+  "[post-static].astro",
+]);
+---
+
+<SlideLayout title="Astro - Routing">
+  <AgendaSection header="Astro - Routing">
+    <Goal>
+      <ol>
+        <li></li>
+      </ol>
+    </Goal>
+
+    <section>
+      <h2>Agenda</h2>
+      <ol>
+        <li></li>
+      </ol>
+    </section>
+  </AgendaSection>
+  <section>
+    <p>
+      <a href="https://docs.astro.build/en/core-concepts/routing/"
+        >https://docs.astro.build/en/core-concepts/routing/</a
+      >
+    </p>
+  </section>
+  <AgendaSection header="Static Routes">
+    <section>
+      <blockquote>
+        <p>
+          .astro page components within the <code>src/pages/</code> directory automatically
+          become pages on your website. Each page's route corresponds to its path
+          and filename within the <code>src/pages/</code> directory.
+        </p>
+      </blockquote>
+      <div class="fragment">
+        <Code code={snippets["routes.txt"]} language="txt" startFrom="1" />
+      </div>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Dynamic Routes">
+    <section class="left">
+      <p>
+        An Astro page file can specify dynamic route parameters in its filename
+        to generate multiple, matching pages. For example,
+        <code>src/pages/authors/[author].astro</code> generates a bio page for every
+        author on your blog.
+      </p>
+      <p>
+        <code>author</code> becomes a <kbd>parameter</kbd> that you can access from
+        inside the page.
+      </p>
+    </section>
+    <section class="left">
+      <p>
+        In Astro's, these pages are generated at build time, and so <span
+          class="fragment highlight-blue"
+          >you must predetermine the list of authors that get a corresponding
+          file.</span
+        >
+      </p>
+    </section>
+    <section class="left">
+      <p>
+        Because all routes must be determined at build time, we must tell Astro
+        what pages exists
+      </p>
+      <p>
+        We do that by calling a "magic" function called <code
+          >getStaticPaths</code
+        >
+      </p>
+      <p>
+        Which returns an array of objects with a <code>params</code>
+        <kbd>property</kbd>
+      </p>
+      <p>For each object, Astro will generate a page</p>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Code">
+    <section>
+      <Code
+        code={snippets["[dog].astro"]}
+        language="js"
+        startFrom="1"
+        lineNumbers="1,11|2,8|3,7|4|10,13|*"
+        stretch
+      />
+      <div class="fragment">
+        <p>This will generate three pages:</p>
+        <ul>
+          <li><kbd>/dogs/rufus</kbd></li>
+          <li><kbd>/dogs/pley</kbd></li>
+          <li><kbd>/dogs/joey</kbd></li>
+        </ul>
+
+        <p>each displaying the corresponding dog name.</p>
+      </div>
+    </section>
+    <section>
+      <p>Men som regel vil vi have mere data med</p>
+      <Code
+        code={snippets["[dog-advanced].astro"]}
+        language="js"
+        startFrom="1"
+        lineNumbers="4|11|14|"
+        stretch
+      />
+    </section>
+  </AgendaSection>
+  <AgendaSection header="TODO">
+    <section>
+      <p>hent alt i første hug?</p>
+      <Code
+        code={snippets["[post-static].astro"]}
+        language="js"
+        startFrom="1"
+      />
+      <Code code={snippets["[post-fetch].astro"]} language="js" startFrom="1" />
+    </section>
+  </AgendaSection>
+</SlideLayout>
+
+<!--
+
+  <Code
+        code={snippets["First.astro"]}
+        language="js"
+        startFrom="1"
+        lineNumbers="1-2|1-5|7|9-11|13-15"
+        stretch
+      />
+ -->

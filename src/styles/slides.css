@@ -8,12 +8,15 @@
   color: hsl(0, 0%, 75%);
 }
 /*general elements*/
+
 .reveal :is(h1, h2, h3, h4, h5, p, li) :is(code, var) {
   text-transform: none;
   color: orange;
   font-family: var(--r-code-font);
 }
-
+.reveal :is(h1, h2, h3, h4, h5, p, li) :is(var) {
+  color: #7070ee; /*orange;*/
+}
 .reveal kbd {
   font-family: monospace, monospace;
   padding: 4px 8px;
@@ -126,11 +129,6 @@ rect {
 
 .reveal .lowercase {
   text-transform: lowercase;
-}
-
-:is(h1, h2, h3, h4, h5, h6, li, p) code {
-  color: orange;
-  font-family: var(--r-code-font);
 }
 
 .codelink {

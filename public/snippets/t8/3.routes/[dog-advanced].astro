@@ -1,0 +1,14 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { dog: "rufus" }, props: { trait: "kælen" } },
+    { params: { dog: "plet" }, props: { trait: "legesyg" } },
+    { params: { dog: "joey" }, props: { trait: "hidsig" } },
+  ];
+}
+
+const { dog } = Astro.params;
+const { trait } = Astro.props;
+---
+
+<div>Hunden {dog} er {trait}!</div>
