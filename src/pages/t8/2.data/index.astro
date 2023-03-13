@@ -40,11 +40,10 @@ const snippets = await codeFetcher("t8/2.data", [
         <li>Client side scripts</li>
         <li>Se video om vores nye database</li>
         <li>Vejledning</li>
-        <li>Obligatorisk projektvejledning:</li>
       </ol>
     </section>
   </AgendaSection>
-  <AgendaSection header="Frontmatter">
+  <AgendaSection h2="Frontmatter">
     <section>
       <p>Whatever we write between</p>
       <pre><code>---
@@ -86,19 +85,29 @@ const snippets = await codeFetcher("t8/2.data", [
       <Code code={snippets["fetch-async.js"]} language="js" startFrom="1" />
     </section>
     <section>
+      <h3>Comparing</h3>
+      <Code code={snippets["fetch-chain.js"]} language="js" startFrom="1" />
+      <Code code={snippets["fetch-async.js"]} language="js" startFrom="1" />
+    </section>
+    <section>
       <h3>How Astro allows / requires us to do it</h3>
       <p>(this only works in Astro, not in vanilla JS)</p>
       <Code code={snippets["fetch-astro.astro"]} language="js" startFrom="1" />
     </section>
     <section>
       <p>Let's try to get some data, and <code>console.log</code> it</p>
+      <p>
+        <a href="https://kea-alt-del.dk/t7/api/products"
+          >https://kea-alt-del.dk/t7/api/products</a
+        >
+      </p>
     </section>
     <section>
       <p>Debugging</p>
-      <p class="fragment">
+      <p>
         Our <code>console.log</code> ends up in the Terminal, WTF?
       </p>
-      <p>
+      <p class="fragment">
         <a
           href="https://docs.astro.build/en/reference/api-reference/#built-in-components"
           >https://docs.astro.build/en/reference/api-reference/#built-in-components</a
@@ -136,10 +145,10 @@ const snippets = await codeFetcher("t8/2.data", [
       </p>
     </section>
     <section>
-      <p>Example</p>
+      <p>Example?</p>
     </section>
     <section>
-      <p>Astro render arrays of elements for us</p>
+      <p>Astro can render an array of elements for us</p>
       <Code code={snippets["arrays-astro.astro"]} language="js" startFrom="1" />
     </section>
     <section>
@@ -223,10 +232,10 @@ const snippets = await codeFetcher("t8/2.data", [
         >
       </p>
     </section>
-    <section>
+    <!-- <section>
       <h3>Obligatorisk projektvejledning</h3>
       <p>Have you signed up?</p>
-    </section>
+    </section> -->
   </AgendaSection>
 </SlideLayout>
 
