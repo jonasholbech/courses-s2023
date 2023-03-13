@@ -5,7 +5,7 @@
   let count = 0;
   let total = 0;
   let checked = false;
-  //localStorage.removeItem("exercise_completions");
+
   if (localStorage.getItem("exercise_completions") === null) {
     console.log("ITS NOT THERE");
     const obj = {};
@@ -21,15 +21,10 @@
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV3cndwdGlib3RseGx2Y2RlaWN2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjQ3OTI4MDYsImV4cCI6MTk4MDM2ODgwNn0.FuHj1T6qJO-wQ_aWaaXNFVfZPG45FsnE3RvHd3PGQmA";
   const supabase = createClient(supabaseUrl, supabaseKey);
   async function toggle(e) {
-    if (checked) {
-      const { data, error } = await supabase.rpc("increment", {
-        slug_text: slug,
-      });
-    } else {
-      const { data, error } = await supabase.rpc("decrement", {
-        slug_text: slug,
-      });
-    }
+    const procedure = checked ? "increment" : "decrement";
+    const { data, error } = await supabase.rpc(procedure, {
+      slug_text: slug,
+    });
     const storage = localStorage.getItem("exercise_completions");
     const parsed = JSON.parse(storage);
     parsed[slug] = checked;
@@ -39,9 +34,10 @@
     let { data, error } = await supabase
       .from("exercise_completion")
       .select("total, count")
-      .eq("slug", slug);
-    total = data[0].total;
-    count = data[0].count;
+      .eq("slug", slug)
+      .maybeSingle();
+    total = data.total;
+    count = data.count;
 
     const exerciseCompletion = supabase
       .channel("custom-update-channel")
@@ -50,7 +46,7 @@
         { event: "UPDATE", schema: "public", table: "exercise_completion" },
         (payload) => {
           if (payload.new.slug === slug) {
-            console.log("Change received!", payload);
+            //console.log("Change received!", payload);
             count = payload.new.count;
           }
         }
@@ -62,12 +58,11 @@
 <fieldset>
   <legend>Finished?</legend>
   <p>{count} / {total}</p>
-  <div>
-    <label class="switch">
-      <input type="checkbox" bind:checked on:change={toggle} />
-      <span class="slider" />
-    </label>
-  </div>
+
+  <label class="switch">
+    <input type="checkbox" bind:checked on:change={toggle} />
+    <span class="slider" />
+  </label>
 </fieldset>
 
 <style>
@@ -77,12 +72,12 @@
   fieldset {
     border: 1px solid #fff;
     padding: 1rem;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
   }
   fieldset p {
-    font-size: 1em;
     font-weight: bold;
     margin: 0;
     padding: 0;
