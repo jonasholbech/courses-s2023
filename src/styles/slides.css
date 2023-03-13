@@ -4,7 +4,9 @@
   --r-code-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
 }
-
+.grey {
+  color: hsl(0, 0%, 75%);
+}
 /*general elements*/
 .reveal :is(h1, h2, h3, h4, h5, p, li) :is(code, var) {
   text-transform: none;

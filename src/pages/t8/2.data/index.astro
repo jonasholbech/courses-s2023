@@ -22,18 +22,18 @@ const snippets = await codeFetcher("t8/2.data", [
 
 <SlideLayout title="Astro - Data">
   <AgendaSection header="Astro - Data">
-    <section>
-      <Goal>
-        <ol>
-          <li>Be able to fetch data in Astro</li>
-          <li>Modify <code>.map</code></li>
-          <li>Understand the difference between build time and client side</li>
-        </ol>
-      </Goal>
-    </section>
+    <Goal>
+      <ol>
+        <li>Be able to fetch data in Astro</li>
+        <li>Modify <code>.map</code></li>
+        <li>Understand the difference between build time and client side</li>
+      </ol>
+    </Goal>
+
     <section>
       <h2>Agenda</h2>
       <ol>
+        <li>NO EXERCISES</li>
         <li>Frontmatter (build time)</li>
         <li>Data fetching</li>
         <li>Mapping</li>
@@ -167,8 +167,31 @@ const snippets = await codeFetcher("t8/2.data", [
         <li><code>return</code> some HTML or a component</li>
       </ol>
     </section>
+  </AgendaSection>
+  <AgendaSection>
+    <img
+      slot="header-component"
+      src="/assets/t8/2.data/dalle-CPM.webp"
+      alt=""
+      width="600"
+    />
+
     <section>
-      <h2>CPM?</h2>
+      <dl>
+        <dt>Copy Paste <span class="highlight-specialty">Moment</span></dt>
+        <dd class="fragment grey">
+          When learning something new, we need to know what to adjust
+        </dd>
+        <dt>Copy Paste <span class="highlight-specialty">Mode</span></dt>
+        <dd class="fragment grey">
+          When skilled, we copy from previous projects
+        </dd>
+        <dt>Copy Paste <span class="highlight-specialty">Much</span></dt>
+        <dd class="fragment grey">
+          A questing I ask you when you've blindly copied stuff from
+          Stackoverflow
+        </dd>
+      </dl>
     </section>
     <section>
       <Code
@@ -202,6 +225,14 @@ const snippets = await codeFetcher("t8/2.data", [
       <h3>Recommendation</h3>
       <p>Put your script files inside <code>src/</code></p>
       <p>That way Astro will optimize/minimize it for you</p>
+    </section>
+    <section>
+      <h2>Use case</h2>
+      <p>
+        <a href="https://github.com/jonasholbech/astro-burger"
+          >https://github.com/jonasholbech/astro-burger</a
+        >
+      </p>
     </section>
   </AgendaSection>
   <AgendaSection header="The rest of the day">
