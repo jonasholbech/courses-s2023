@@ -31,6 +31,7 @@
     "save-dev": "^0.0.1-security"
   },
   "dependencies": {
-    "@astrojs/svelte": "^1.0.2"
+    "@astrojs/svelte": "^1.0.2",
+    "@supabase/supabase-js": "^2.10.0"
   }
 }

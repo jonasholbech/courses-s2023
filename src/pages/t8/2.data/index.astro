@@ -3,6 +3,7 @@ import SlideLayout from "../../../layouts/SlideLayout.astro";
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
 import Explainer from "../../../components/Explainer.svelte";
+import CompletionTracker from "../../../components/CompletionTracker.svelte";
 import AgendaSection from "../../../components/AgendaSection.astro";
 import Goal from "../../../components/Goal.astro";
 
@@ -53,6 +54,7 @@ const snippets = await codeFetcher("t8/2.data", [
       <p><kbd>npm create astro@latest</kbd></p>
       <p><code>npm create astro@latest</code></p>
       <p><var>npm create astro@latest</var></p>
+      <CompletionTracker slug="t8-3-data-ex-1" client:visible />
     </section>
   </AgendaSection>
   <AgendaSection h2="Frontmatter">
@@ -139,6 +141,7 @@ const snippets = await codeFetcher("t8/2.data", [
     <section>
       <p>Your Turn</p>
       <p>Make my code work</p>
+      <CompletionTracker slug="t8-3-data-ex-2" client:visible />
     </section>
   </AgendaSection>
   <AgendaSection header="Mapping">
@@ -227,6 +230,7 @@ const snippets = await codeFetcher("t8/2.data", [
     <section>
       <p>Your Turn</p>
       <p>Make my code work</p>
+      <CompletionTracker slug="t8-3-data-ex-3" client:visible />
     </section>
   </AgendaSection>
   <AgendaSection header="Client side scripts">
@@ -278,6 +282,7 @@ const snippets = await codeFetcher("t8/2.data", [
         </li>
         <li>Link them up correctly</li>
       </ol>
+      <CompletionTracker slug="t8-3-data-ex-4" client:visible />
     </section>
   </AgendaSection>
   <AgendaSection header="The rest of the day">
