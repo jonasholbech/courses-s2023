@@ -1,0 +1,81 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import Explainer from "../../../components/Explainer.svelte";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+
+const snippets = await codeFetcher("t8/3.recap", []);
+---
+
+<SlideLayout title="Astro - Re-Cap">
+  <AgendaSection header="Astro - Re-Cap">
+    <Goal>
+      <ol>
+        <li>A Re Cap of Astro?</li>
+      </ol>
+    </Goal>
+
+    <section>
+      <h2>Agenda</h2>
+      <ol>
+        <li>Dates</li>
+        <li>Resources</li>
+        <li>What is Astro</li>
+        <li>Tools Needed</li>
+        <li>A Sample Project?</li>
+        <li>Coaching</li>
+        <li>???</li>
+      </ol>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="Dates">
+    <section>
+      <p>Because Fronter is confusing</p>
+      <p class="fragment">Is it?</p>
+      <ol>
+        <li>1/3</li>
+        <li>2/3</li>
+        <li>3/3</li>
+        <li>14/3</li>
+        <li>15/3</li>
+        <li>16/3</li>
+      </ol>
+    </section>
+  </AgendaSection>
+
+  <AgendaSection header="Resources">
+    <ul>
+      <li><a href="https://astro.build">https://astro.build</a></li>
+      <li>
+        <a
+          href="https://www.youtube.com/playlist?list=PLCx1FpZ4Dtb3_siiU1YtaIKJmZEzu8lje"
+          >Astro playlist</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/playlist?list=PLCx1FpZ4Dtb10T6cClBrq7jHky5HmVots"
+          >Supabase Playlist</a
+        >
+      </li>
+    </ul>
+  </AgendaSection>
+
+  <AgendaSection header="What is Astro" />
+  <AgendaSection header="Tools needed" />
+  <AgendaSection header="A sample project?" />
+</SlideLayout>
+
+<!--
+
+  <Code
+        code={snippets["First.astro"]}
+        language="js"
+        startFrom="1"
+        lineNumbers="1-2|1-5|7|9-11|13-15"
+        stretch
+      />
+ -->

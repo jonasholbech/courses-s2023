@@ -30,6 +30,7 @@
     parsed[slug] = checked;
     localStorage.setItem("exercise_completions", JSON.stringify(parsed));
   }
+  //TODO: blur on click, it traps the space key
   onMount(async () => {
     let { data, error } = await supabase
       .from("exercise_completion")
