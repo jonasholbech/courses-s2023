@@ -2,10 +2,10 @@
 export async function getStaticPaths() {
   const data = await fetch("...").then((response) => response.json());
 
-  return data.map((post) => {
+  return data.map((onePost) => {
     return {
-      params: { id: post.id },
-      props: { post },
+      params: { id: onePost.id },
+      props: { post: onePost },
     };
   });
 }

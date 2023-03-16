@@ -2,6 +2,8 @@
   import { createClient } from "@supabase/supabase-js";
   import { onMount } from "svelte";
   export let slug;
+  export let position = "fixed";
+  export let title = "Finished?";
   let count = 0;
   let total = 0;
   let checked = false;
@@ -44,7 +46,12 @@
       .channel("custom-update-channel")
       .on(
         "postgres_changes",
-        { event: "UPDATE", schema: "public", table: "exercise_completion" },
+        {
+          event: "UPDATE",
+          schema: "public",
+          table: "exercise_completion",
+          filter: `slug=eq.${slug}`,
+        },
         (payload) => {
           if (payload.new.slug === slug) {
             //console.log("Change received!", payload);
@@ -56,8 +63,8 @@
   });
 </script>
 
-<fieldset>
-  <legend>Finished?</legend>
+<fieldset style={`--position: ${position}`}>
+  <legend>{title}</legend>
   <p>{count} / {total}</p>
 
   <label class="switch">
@@ -74,7 +81,7 @@
     border: 1px solid #fff;
     padding: 1rem;
     display: inline-block;
-    position: fixed;
+    position: var(--position);
     top: 0;
     right: 0;
   }
