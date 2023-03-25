@@ -53,6 +53,7 @@
           filter: `slug=eq.${slug}`,
         },
         (payload) => {
+          //TODO: nok overflødig nu hvor der kom filter på
           if (payload.new.slug === slug) {
             //console.log("Change received!", payload);
             count = payload.new.count;
