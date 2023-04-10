@@ -3,9 +3,9 @@ const email = "jofh@kea.dk";
 
 let isEven;
 if (age % 2 === 0) {
-  even = true;
+  isEven = true;
 } else {
-  even = false;
+  isEven = false;
 }
 
 let role = "visitor";
