@@ -16,6 +16,7 @@ const snippets = await codeFetcher("react/3.mini-animal-base", [
   "stateful-component-4.js",
   "stateful-component-5.js",
   "react-state-fail.js",
+  "ninja-script.js",
 ]);
 
 //TODO: maybe not here: https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
@@ -30,7 +31,9 @@ const snippets = await codeFetcher("react/3.mini-animal-base", [
     <h2>Sum up</h2>
     <ol>
       <li>Mad Brodt - Guest speaker</li>
+      <li>Ninja script that I forgot</li>
     </ol>
+    <Code code={snippets["ninja-script.js"]} language="js" />
   </section>
   <Goal>
     <ol>
