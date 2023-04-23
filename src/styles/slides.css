@@ -247,3 +247,6 @@ rect.red {
   stroke: red;
   stroke-dasharray: 0;
 }
+[contenteditable] {
+  border-bottom: 1px dashed white;
+}
