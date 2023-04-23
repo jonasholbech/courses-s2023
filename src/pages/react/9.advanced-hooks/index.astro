@@ -6,6 +6,7 @@ import Goal from "../../../components/Goal.astro";
 //import Explainer from "../../../components/Explainer.svelte";
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
+import CompletionTracker from "../../../components/CompletionTracker.svelte";
 const snippets = await codeFetcher("react/9.advanced-hooks", [
   "numberContext.js",
   "numberContextProvider.js",
@@ -28,6 +29,18 @@ const snippets = await codeFetcher("react/9.advanced-hooks", [
       <li>Ant D</li>
       <li>Context, Reducers &amp; sharing state between components/pages</li>
     </ol>
+  </section>
+  <section>
+    <h2>Evaluation</h2>
+    <p>Check you e-mail</p>
+    <p>I know it's not your favourite, but it is important</p>
+    <CompletionTracker slug="react-9-advanced-hooks-ex-1" client:visible />
+    <p>Click the toggle when you're done</p>
+    <p class="fragment">
+      <span class="highlight-specialty"
+        >Above X and I'll brew beer for your graduation!</span
+      >
+    </p>
   </section>
   <section>
     <p>There's no way around it, this is hard</p>
